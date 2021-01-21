@@ -73,8 +73,22 @@ export const App = () => {
                     <div className="main-title-oneClickTrading"></div>
                 </div>
             </section>
-            <section className="main-content-block"></section>
-            <section className="sectionFive"></section>
+            <section className="main-content-block">
+                <div className="main-content-tradeBar"></div>
+                <div className="main-content-canvas"></div>
+                <div className="main-content-tradeInfo">
+                    <div className="main-content-tradeInfo-title"></div>
+                    <div className="main-content-tradeInfo-investAmountBar"></div>
+                    <div className="main-content-tradeInfo-investAmountOption"></div>
+                    <div className="main-content-tradeInfo-utility">
+                        <div className="main-content-tradeInfo-utility-highLowButton"></div>
+                        <div className="main-content-tradeInfo-utility-investButton"></div>
+                    </div>
+                    <div className="main-content-tradeInfo-payout"></div>
+                    <div className="main-content-tradeInfo-return"></div>
+                </div>
+            </section>
+            <section className="footer-title"></section>
             <section className="sectionSix"></section>
         </div>
     )
