@@ -88,8 +88,14 @@ export const App = () => {
                     <div className="main-content-tradeInfo-return"></div>
                 </div>
             </section>
-            <section className="footer-title"></section>
-            <section className="sectionSix"></section>
+            <section className="currentActivity-header">
+                <div className="currentActivity-header-title"></div>
+                <div className="currentActivity-header-expandAssetPopUpLink">
+                    <div className="currentActivity-header-expandAssetPopUpLink-description"></div>
+                    <div className="currentActivity-header-expandAssetPopUpLink-manigfierIcon"></div>
+                </div>
+            </section>
+            <section className="currentActivity-content"></section>
         </div>
     )
 }
