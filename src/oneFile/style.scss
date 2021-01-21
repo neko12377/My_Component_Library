@@ -1,0 +1,274 @@
+.base {
+    background-color: #131b2b;
+    height: 100%;
+    justify-content: center;
+    width: 1174px;
+}
+
+.sectionOne {
+  display: flex;
+  background-color: red;
+  justify-content: flex-start;
+  width: 100%;
+  height: 60px;
+}
+
+.tabGroup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 55%;
+  height: 100%;
+  background-color: burlywood;
+  padding-left: 49px;
+}
+
+
+$tabWidth: 25%;
+
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $tabWidth;
+  height: 31px;
+  margin-right: 3px;
+  background-color: darkolivegreen;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.optionGroup {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 45%;
+  height: 100%;
+  background-color: chocolate;
+}
+
+.view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27px;
+  height: 30px;
+  background-color: brown;
+}
+
+.assetsSelector {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 176px;
+  height: 36px;
+  padding: 8px 13px;
+  background-color: #131b2b;
+}
+
+.assetContent {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: burlywood;
+  width: 85%;
+  height: 100%;
+}
+
+.downArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgreen;
+  width: 15%;
+  height: 100%;
+}
+
+.operator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 100%;
+  background-color: darkslategrey;
+}
+
+.sectionTwo {
+  display: flex;
+  justify-content: space-around;
+  padding: 25px 0;
+  width: 100%;
+  height: 183px;
+  background-color: pink;
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 100%;
+  background-color: blue;
+}
+
+$currencyContentWidth: 20%;
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: $currencyContentWidth;
+  height: 100%;
+  padding: 4px;
+  background-color: gray;
+}
+
+.currency {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 37px;
+  padding: 12px 14px 11px 19px;
+  background-color: #131b2b;
+}
+
+.currencyNumber {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  background-color: blueviolet;
+}
+
+.sectionThree {
+  display: flex;
+  justify-content: space-around;
+  background-color: aqua;
+  width: 100%;
+  height: 58px;
+  padding: 17px 21px 15px 31px;
+}
+
+.main-title-leftSide {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: gray;
+}
+
+.main-title-currencyType {
+  display: flex;
+  justify-content: center;
+  width: 95px;
+  height: 100%;
+  background-color: darkslategrey;
+}
+
+.main-title-riseDeclineArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 100%;
+  background-color: coral;
+  margin-left: 36px;
+}
+
+.main-title-currencyNum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 73px;
+    height: 100%;
+    background-color: cadetblue;
+    margin-right: 20px;
+}
+
+.main-title-rightSide {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: gold;
+}
+
+.main-title-banSign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 100%;
+  margin-right: 4px;
+  background-color: blanchedalmond;
+}
+
+.main-title-endTime {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 72px;
+    height: 100%;
+    margin-right: 19px;
+    background-color: dodgerblue;
+}
+
+.main-title-restTime {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 99px;
+  height: 100%;
+  margin-right: 32px;
+  background-color: darkgrey;
+}
+
+.main-title-clockSign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17px;
+  height: 100%;
+  margin-right: 4px;
+  background-color: coral;
+}
+
+.main-title-oneClickTrading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 100%;
+  background-color: darkslategrey;
+}
+
+.main-content-block {
+  display: flex;
+  justify-content: space-around;
+  padding: 32px 29px 14px 31px;
+  background-color: bisque;
+  width: 100%;
+  height: 346px;
+}
+
+.sectionFive {
+  display: flex;
+  justify-content: space-around;
+  padding: 17px 29px 14px 31px;
+  width: 100%;
+  height: 51px;
+  background-color: lightgreen;
+}
+
+.sectionSix {
+  display: flex;
+  justify-content: center;
+  padding: 30px 29px 24px 31px;
+  height: 105px;
+  background-color: royalblue;
+}
