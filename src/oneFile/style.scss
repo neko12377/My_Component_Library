@@ -5,7 +5,7 @@
     width: 1174px;
 }
 
-.sectionOne {
+.header {
   display: flex;
   background-color: red;
   justify-content: flex-start;
@@ -13,7 +13,7 @@
   height: 60px;
 }
 
-.tabGroup {
+.header-tabGroup {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -39,7 +39,7 @@ $tabWidth: 25%;
   }
 }
 
-.optionGroup {
+.header-utilityOptions {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -48,7 +48,7 @@ $tabWidth: 25%;
   background-color: chocolate;
 }
 
-.view {
+.header-utilityOptions-dropDownListLabel {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +57,7 @@ $tabWidth: 25%;
   background-color: brown;
 }
 
-.assetsSelector {
+.header-utilityOptions-dropDownList {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -67,7 +67,7 @@ $tabWidth: 25%;
   background-color: #131b2b;
 }
 
-.assetContent {
+.header-utilityOptions-dropDownList-content {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -76,7 +76,7 @@ $tabWidth: 25%;
   height: 100%;
 }
 
-.downArrow {
+.header-utilityOptions-dropDownList-arrowToExpand {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,7 +85,7 @@ $tabWidth: 25%;
   height: 100%;
 }
 
-.operator {
+.header-utilityOptions-collapseSign {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,7 +94,7 @@ $tabWidth: 25%;
   background-color: darkslategrey;
 }
 
-.sectionTwo {
+.carousel {
   display: flex;
   justify-content: space-around;
   padding: 25px 0;
@@ -103,7 +103,7 @@ $tabWidth: 25%;
   background-color: pink;
 }
 
-.arrow {
+.carousel-arrow {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,7 +114,7 @@ $tabWidth: 25%;
 
 $currencyContentWidth: 20%;
 
-.infoBlock {
+.carousel-infoBlock {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -124,7 +124,7 @@ $currencyContentWidth: 20%;
   background-color: gray;
 }
 
-.currency {
+.carousel-infoBlock-title {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -134,7 +134,7 @@ $currencyContentWidth: 20%;
   background-color: #131b2b;
 }
 
-.currencyNumber {
+.carousel-infoBlock-info {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -143,7 +143,7 @@ $currencyContentWidth: 20%;
   background-color: blueviolet;
 }
 
-.sectionThree {
+.main-title {
   display: flex;
   justify-content: space-around;
   background-color: aqua;

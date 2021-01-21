@@ -4,8 +4,8 @@ import "./style.scss"
 export const App = () => {
     return (
         <div className="base">
-            <section className="sectionOne">
-                <div className="tabGroup">
+            <section className="header">
+                <div className="header-tabGroup">
                     <div className="tab">
                         ALL
                     </div>
@@ -19,45 +19,45 @@ export const App = () => {
                         1 DAY
                     </div>
                 </div>
-                <div className="optionGroup">
-                    <div className="view">
+                <div className="header-utilityOptions">
+                    <div className="header-utilityOptions-dropDownListLabel">
                         view
                     </div>
-                    <div className="assetsSelector">
-                        <div className="assetContent">
+                    <div className="header-utilityOptions-dropDownList">
+                        <div className="header-utilityOptions-dropDownList-content">
                             All Assets
                         </div>
-                        <div className="downArrow" />
+                        <div className="header-utilityOptions-dropDownList-arrowToExpand" />
                     </div>
-                    <div className="operator"></div>
+                    <div className="header-utilityOptions-collapseSign"></div>
                 </div>
             </section>
-            <section className="sectionTwo">
-                <div className="arrow"></div>
-                <div className="infoBlock">
-                    <div className="currency"></div>
-                    <div className="currencyNumber"></div>
+            <section className="carousel">
+                <div className="carousel-arrow"></div>
+                <div className="carousel-infoBlock">
+                    <div className="carousel-infoBlock-title"></div>
+                    <div className="carousel-infoBlock-info"></div>
                 </div>
-                <div className="infoBlock">
-                    <div className="currency"></div>
-                    <div className="currencyNumber"></div>
+                <div className="carousel-infoBlock">
+                    <div className="carousel-infoBlock-title"></div>
+                    <div className="carousel-infoBlock-info"></div>
                 </div>
-                <div className="infoBlock">
-                    <div className="currency"></div>
-                    <div className="currencyNumber"></div>
+                <div className="carousel-infoBlock">
+                    <div className="carousel-infoBlock-title"></div>
+                    <div className="carousel-infoBlock-info"></div>
                 </div>
-                <div className="infoBlock">
-                    <div className="currency"></div>
-                    <div className="currencyNumber"></div>
+                <div className="carousel-infoBlock">
+                    <div className="carousel-infoBlock-title"></div>
+                    <div className="carousel-infoBlock-info"></div>
                 </div>
-                <div className="infoBlock">
-                    <div className="currency"></div>
-                    <div className="currencyNumber"></div>
+                <div className="carousel-infoBlock">
+                    <div className="carousel-infoBlock-title"></div>
+                    <div className="carousel-infoBlock-info"></div>
                 </div>
-                <div className="arrow"></div>
+                <div className="carousel-arrow"></div>
 
             </section>
-            <section className="sectionThree">
+            <section className="main-title">
                 <div className="main-title-leftSide">
                     <div className="main-title-currencyType"></div>
                     <div className="main-title-riseDeclineArrow"></div>
