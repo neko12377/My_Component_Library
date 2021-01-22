@@ -1,4 +1,5 @@
 import React from "react";
+import {Tabs} from "./view/Tabs";
 import "./style.scss"
 
 export const App = () => {
@@ -6,18 +7,23 @@ export const App = () => {
         <div className="base">
             <section className="header">
                 <div className="header-tabGroup">
-                    <div className="tab">
-                        ALL
-                    </div>
-                    <div className="tab">
-                        15 MIN
-                    </div>
-                    <div className="tab">
-                        1 HOUR
-                    </div>
-                    <div className="tab">
-                        1 DAY
-                    </div>
+                    <Tabs
+                        tabNumber={4}
+                        tabTitles={["ALL", "15 MIN", "1 HOUR", "1 DAY"]}
+                        onClick={(hello) => {}}
+                    />
+                    {/*<div className="tab">*/}
+                    {/*    ALL*/}
+                    {/*</div>*/}
+                    {/*<div className="tab">*/}
+                    {/*    15 MIN*/}
+                    {/*</div>*/}
+                    {/*<div className="tab">*/}
+                    {/*    1 HOUR*/}
+                    {/*</div>*/}
+                    {/*<div className="tab">*/}
+                    {/*    1 DAY*/}
+                    {/*</div>*/}
                 </div>
                 <div className="header-utilityOptions">
                     <div className="header-utilityOptions-dropDownListLabel">
