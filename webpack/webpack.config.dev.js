@@ -6,7 +6,7 @@ const chalk = require("chalk");
 const config = {
     mode: "development",
     entry: {
-        index: "./index.tsx",
+        index: "./Index",
     },
     output: {
         path: path.resolve("dist"),

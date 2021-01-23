@@ -1,0 +1,83 @@
+.header {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 60px;
+
+  .header-tabGroup {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 85%;
+    height: 100%;
+    padding-left: 49px;
+  }
+
+  $tabWidth: 25%;
+
+  .tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $tabWidth;
+    height: 31px;
+    margin-right: 3px;
+    background-color: darkolivegreen;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .header-utilityOptions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+
+    .header-utilityOptions-dropDownListLabel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 27px;
+      height: 30px;
+      margin-right: 4px;
+    }
+
+    .header-utilityOptions-dropDownList {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 176px;
+      height: 36px;
+      padding: 8px 13px;
+      background-color: rgb(53, 53, 63);
+
+      .header-utilityOptions-dropDownList-arrowToExpand {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgreen;
+        width: 15%;
+        height: 100%;
+      }
+    }
+
+    .header-utilityOptions-dropDownBar-content {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 85%;
+      height: 100%;
+    }
+
+    .header-utilityOptions-collapseSign {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 52px;
+      height: 100%;
+      background-color: darkslategrey;
+    }
+  }
+}
