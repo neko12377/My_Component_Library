@@ -1,5 +1,6 @@
 import React from "react";
 import {Tabs} from "./view/Tabs";
+import {DropDownList} from "./view/DropDownList";
 import "./style.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faAngleDoubleUp, faAngleDoubleDown, faChevronLeft, faChevronRight, faTimesCircle, faHistory, faExchangeAlt } from '@fortawesome/free-solid-svg-icons';
@@ -20,9 +21,10 @@ export const App = () => {
                         view
                     </div>
                     <div className="header-utilityOptions-dropDownList">
-                        <div className="header-utilityOptions-dropDownBar-content">
-                            All Assets
-                        </div>
+                        <DropDownList onClick={(content) => {console.log(content)}} />
+                        {/*<div className="header-utilityOptions-dropDownBar-content">*/}
+                        {/*    All Assets*/}
+                        {/*</div>*/}
                         <div className="header-utilityOptions-dropDownList-arrowToExpand" />
                     </div>
                     <div className="header-utilityOptions-collapseSign"></div>
