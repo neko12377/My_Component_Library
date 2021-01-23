@@ -2,7 +2,7 @@ import React from "react";
 import {Tabs} from "./view/Tabs";
 import "./style.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faAngleDoubleUp, faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faAngleDoubleUp, faAngleDoubleDown, faChevronLeft, faChevronRight, faTimesCircle, faHistory, faExchangeAlt } from '@fortawesome/free-solid-svg-icons';
 
 export const App = () => {
     return (
@@ -29,7 +29,9 @@ export const App = () => {
                 </div>
             </section>
             <section className="carousel">
-                <div className="carousel-arrow"></div>
+                <div className="carousel-arrow">
+                    <FontAwesomeIcon icon={faChevronLeft}/>
+                </div>
                 <div className="carousel-infoBlock">
                     <div className="carousel-infoBlock-title">
                         AUD/USD <FontAwesomeIcon icon={faClock} />23h
@@ -139,7 +141,9 @@ export const App = () => {
                         </div>
                     </div>
                 </div>
-                <div className="carousel-arrow"></div>
+                <div className="carousel-arrow">
+                    <FontAwesomeIcon icon={faChevronRight}/>
+                </div>
 
             </section>
             <section className="main-title">
@@ -147,21 +151,29 @@ export const App = () => {
                     <div className="main-title-currencyType">
                         Gold
                     </div>
-                    <div className="main-title-riseDeclineArrow"></div>
+                    <div className="main-title-riseDeclineArrow">
+                        <FontAwesomeIcon icon={faAngleDoubleUp}/>
+                    </div>
                     <div className="main-title-currencyNum">
                         1234.72
                     </div>
                 </div>
                 <div className="main-title-rightSide">
                     <div className="main-title-endTime">
-                        <div className="main-title-banSign"></div>
+                        <div className="main-title-banSign">
+                            <FontAwesomeIcon icon={faTimesCircle}/>
+                        </div>
                         12:00
                     </div>
                     <div className="main-title-restTime">
-                        <div className="main-title-clockSign"></div>
+                        <div className="main-title-clockSign">
+                            <FontAwesomeIcon icon={faHistory}/>
+                        </div>
                         7:25:42
                     </div>
-                    <div className="main-title-oneClickTrading"></div>
+                    <div className="main-title-oneClickTrading">
+                        <FontAwesomeIcon icon={faExchangeAlt}/>
+                    </div>
                 </div>
             </section>
             <section className="main-content-block">

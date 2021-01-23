@@ -86,9 +86,9 @@ export const Tabs = ({tabNumber, tabTitles, onClick}: TabsPropsInterface) => {
     }
     const generateTabs = () => {
         const howMuchTabs = new Array(tabNumber);
+        // TODO
         // const tabWidth = (100 / tabNumber) + "%";
         const tabWidth = "300px";
-
         return Array.from(howMuchTabs,(tab, index) => {
             const identity = tabTitles[index] ? tabTitles[index] : "nothing" + index;
             return (
