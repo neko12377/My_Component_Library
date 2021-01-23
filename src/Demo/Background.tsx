@@ -10,7 +10,7 @@ const StyledBackground = styled.div<StyledBackgroundPropsInterface>`
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: #333333;
+  background-color: rgb(35, 35, 45);
   // test
 `
 

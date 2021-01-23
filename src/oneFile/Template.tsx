@@ -12,25 +12,13 @@ export const App = () => {
                         tabTitles={["ALL", "15 MIN", "1 HOUR", "1 DAY"]}
                         onClick={(hello) => {}}
                     />
-                    {/*<div className="tab">*/}
-                    {/*    ALL*/}
-                    {/*</div>*/}
-                    {/*<div className="tab">*/}
-                    {/*    15 MIN*/}
-                    {/*</div>*/}
-                    {/*<div className="tab">*/}
-                    {/*    1 HOUR*/}
-                    {/*</div>*/}
-                    {/*<div className="tab">*/}
-                    {/*    1 DAY*/}
-                    {/*</div>*/}
                 </div>
                 <div className="header-utilityOptions">
                     <div className="header-utilityOptions-dropDownListLabel">
                         view
                     </div>
                     <div className="header-utilityOptions-dropDownList">
-                        <div className="header-utilityOptions-dropDownList-content">
+                        <div className="header-utilityOptions-dropDownBar-content">
                             All Assets
                         </div>
                         <div className="header-utilityOptions-dropDownList-arrowToExpand" />
@@ -41,40 +29,91 @@ export const App = () => {
             <section className="carousel">
                 <div className="carousel-arrow"></div>
                 <div className="carousel-infoBlock">
-                    <div className="carousel-infoBlock-title"></div>
-                    <div className="carousel-infoBlock-info"></div>
+                    <div className="carousel-infoBlock-title">
+                        AUD/USD 23h
+                    </div>
+                    <div className="carousel-infoBlock-info">
+                        <div className="carousel-infoBlock-info-mainContent">
+                            Trading is closed
+                        </div>
+                        <div className="carousel-infoBlock-info-subContent">
+                            Opening: Monday 06:00 AM
+                        </div>
+                    </div>
                 </div>
                 <div className="carousel-infoBlock">
-                    <div className="carousel-infoBlock-title"></div>
-                    <div className="carousel-infoBlock-info"></div>
+                    <div className="carousel-infoBlock-title">
+                        AUD/USD 15m
+                    </div>
+                    <div className="carousel-infoBlock-info">
+                        <div className="carousel-infoBlock-info-mainContent">
+                            Trading is closed
+                        </div>
+                        <div className="carousel-infoBlock-info-subContent">
+                            Opening: Monday 06:00 AM
+                        </div>
+                    </div>
                 </div>
                 <div className="carousel-infoBlock">
-                    <div className="carousel-infoBlock-title"></div>
-                    <div className="carousel-infoBlock-info"></div>
+                    <div className="carousel-infoBlock-title">
+                        AUD/USD 1h
+                    </div>
+                    <div className="carousel-infoBlock-info">
+                        <div className="carousel-infoBlock-info-mainContent">
+                            Trading is closed
+                        </div>
+                        <div className="carousel-infoBlock-info-subContent">
+                            Opening: Monday 06:00 AM
+                        </div>
+                    </div>
                 </div>
                 <div className="carousel-infoBlock">
-                    <div className="carousel-infoBlock-title"></div>
-                    <div className="carousel-infoBlock-info"></div>
+                    <div className="carousel-infoBlock-title">
+                        AUD/USD 15m
+                    </div>
+                    <div className="carousel-infoBlock-info">
+                        <div className="carousel-infoBlock-info-mainContent">
+                            Trading is closed
+                        </div>
+                        <div className="carousel-infoBlock-info-subContent">
+                            Opening: Monday 06:00 AM
+                        </div>
+                    </div>
                 </div>
                 <div className="carousel-infoBlock">
-                    <div className="carousel-infoBlock-title"></div>
-                    <div className="carousel-infoBlock-info"></div>
+                    <div className="carousel-infoBlock-title">
+                        AUD/USD 15m
+                    </div>
+                    <div className="carousel-infoBlock-info">
+                        <div className="carousel-infoBlock-info-mainContent">
+                            Trading is closed
+                        </div>
+                        <div className="carousel-infoBlock-info-subContent">
+                            Opening: Monday 06:00 AM
+                        </div>
+                    </div>
                 </div>
                 <div className="carousel-arrow"></div>
 
             </section>
             <section className="main-title">
                 <div className="main-title-leftSide">
-                    <div className="main-title-currencyType"></div>
+                    <div className="main-title-currencyType">
+                        Gold
+                    </div>
                     <div className="main-title-riseDeclineArrow"></div>
-                    <div className="main-title-currencyNum"></div>
+                    <div className="main-title-currencyNum">
+                        1234.72
+                    </div>
                 </div>
                 <div className="main-title-rightSide">
                     <div className="main-title-endTime">
                         <div className="main-title-banSign"></div>
+                        12:00
                     </div>
                     <div className="main-title-restTime">
                         <div className="main-title-clockSign"></div>
+                        7:25:42
                     </div>
                     <div className="main-title-oneClickTrading"></div>
                 </div>
@@ -95,10 +134,14 @@ export const App = () => {
                 </div>
             </section>
             <section className="currentActivity-header">
-                <div className="currentActivity-header-title"></div>
+                <div className="currentActivity-header-title">
+                    CURRENT ACTIVITY
+                </div>
                 <div className="currentActivity-header-expandAssetPopUpLink">
-                    <div className="currentActivity-header-expandAssetPopUpLink-description"></div>
-                    <div className="currentActivity-header-expandAssetPopUpLink-manigfierIcon"></div>
+                    <div className="currentActivity-header-expandAssetPopUpLink-description">
+                        View all Trade Actions
+                    </div>
+                    <div className="currentActivity-header-expandAssetPopUpLink-magnifierIcon"></div>
                 </div>
             </section>
             <section className="currentActivity-content"></section>

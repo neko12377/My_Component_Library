@@ -43,7 +43,6 @@ $tabWidth: 25%;
   align-items: center;
   width: 45%;
   height: 100%;
-  background-color: chocolate;
 }
 
 .header-utilityOptions-dropDownListLabel {
@@ -52,7 +51,6 @@ $tabWidth: 25%;
   align-items: center;
   width: 27px;
   height: 30px;
-  background-color: brown;
 }
 
 .header-utilityOptions-dropDownList {
@@ -62,10 +60,10 @@ $tabWidth: 25%;
   width: 176px;
   height: 36px;
   padding: 8px 13px;
-  background-color: #131b2b;
+  background-color: #1355d6;
 }
 
-.header-utilityOptions-dropDownList-content {
+.header-utilityOptions-dropDownBar-content {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -98,7 +96,7 @@ $tabWidth: 25%;
   padding: 25px 0;
   width: 100%;
   height: 183px;
-  background-color: pink;
+  background-color: rgb(53, 53, 63);
 }
 
 .carousel-arrow {
@@ -119,7 +117,6 @@ $currencyContentWidth: 20%;
   width: $currencyContentWidth;
   height: 100%;
   padding: 4px;
-  background-color: gray;
 }
 
 .carousel-infoBlock-title {
@@ -130,21 +127,40 @@ $currencyContentWidth: 20%;
   height: 37px;
   padding: 12px 14px 11px 19px;
   background-color: #131b2b;
+  border-radius: 8px 8px 0 0 ;
 }
 
 .carousel-infoBlock-info {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   width: 100%;
   height: 90px;
-  background-color: blueviolet;
+  padding: 13px 19px;
+  font-size: 12px;
+  background-color: rgb(35, 35, 45);
+  border-radius: 0 0 12px 12px;
+}
+
+.carousel-infoBlock-info-mainContent {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 80%;
+}
+
+.carousel-infoBlock-info-subContent {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 20%;
 }
 
 .main-title {
   display: flex;
   justify-content: space-around;
-  background-color: aqua;
+  background-color: #131b2b;
   width: 100%;
   height: 58px;
   padding: 17px 21px 15px 31px;
@@ -156,15 +172,15 @@ $currencyContentWidth: 20%;
   align-items: center;
   width: 50%;
   height: 100%;
-  background-color: gray;
 }
 
 .main-title-currencyType {
   display: flex;
   justify-content: center;
-  width: 95px;
+  align-items: center;
+  min-width: 95px;
   height: 100%;
-  background-color: darkslategrey;
+  font-size: 23px;
 }
 
 .main-title-riseDeclineArrow {
@@ -181,9 +197,8 @@ $currencyContentWidth: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 73px;
+    min-width: 73px;
     height: 100%;
-    background-color: cadetblue;
     margin-right: 20px;
 }
 
@@ -193,7 +208,6 @@ $currencyContentWidth: 20%;
   align-items: center;
   width: 50%;
   height: 100%;
-  background-color: gold;
 }
 
 .main-title-banSign {
@@ -210,20 +224,17 @@ $currencyContentWidth: 20%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 72px;
     height: 100%;
     margin-right: 19px;
-    background-color: dodgerblue;
 }
 
 .main-title-restTime {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 99px;
+  min-width: 99px;
   height: 100%;
   margin-right: 32px;
-  background-color: darkgrey;
 }
 
 .main-title-clockSign {
@@ -249,7 +260,7 @@ $currencyContentWidth: 20%;
   display: flex;
   justify-content: space-around;
   padding: 32px 29px 14px 31px;
-  background-color: bisque;
+  background-color: rgb(53, 53, 63);
   width: 100%;
   height: 346px;
 }
@@ -368,16 +379,15 @@ $currencyContentWidth: 20%;
   padding: 17px 29px 14px 31px;
   width: 100%;
   height: 51px;
-  background-color: lightgreen;
+  background-color: #131b2b;
 }
 
 .currentActivity-header-title {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 160px;
+  min-width: 160px;
   height: 100%;
-  background-color: royalblue;
 }
 
 .currentActivity-header-expandAssetPopUpLink {
@@ -386,19 +396,18 @@ $currencyContentWidth: 20%;
   align-items: center;
   width: 142px;
   height: 100%;
-  background-color: brown;
 }
 
 .currentActivity-header-expandAssetPopUpLink-description {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 125px;
+  min-width: 125px;
   height: 100%;
-  background-color: aqua;
+  font-size: 12px;
 }
 
-.currentActivity-header-expandAssetPopUpLink-manigfierIcon {
+.currentActivity-header-expandAssetPopUpLink-magnifierIcon {
   display: flex;
   justify-content: center;
   align-items: center;

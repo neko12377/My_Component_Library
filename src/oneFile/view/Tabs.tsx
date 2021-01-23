@@ -76,7 +76,6 @@ export const Tabs = ({tabNumber, tabTitles, onClick}: TabsPropsInterface) => {
         setCurrentFocusedTab(identity)
         onClick(identity);
     }
-    console.log(currentFocusedTab, 8889);
     const generateTabs = () => {
         const howMuchTabs = new Array(tabNumber);
         const tabWidth = (100 / tabNumber) + "%";
