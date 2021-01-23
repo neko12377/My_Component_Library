@@ -3,12 +3,10 @@ import styled from "styled-components";
 
 const StyledDropDownBar = styled.div`
   display: flex;
-  justify-content: space-around;
   align-items: center;
   width: 176px;
   height: 36px;
-  padding: 8px 13px;
-  background-color: #1355d6;
+  padding: 8px 0;
   position: relative;
 `;
 
@@ -16,7 +14,6 @@ const StyledDropDownBarContent = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: burlywood;
   width: 85%;
   height: 100%;
 `;
@@ -26,9 +23,10 @@ interface DropDownBarContentPropsInterface {
 }
 
 const DropDownBarContent = ({content}: DropDownBarContentPropsInterface) => {
+    const contentToDisplay = content ? content : "ALL Assets";
     return (
         <StyledDropDownBarContent>
-            {content}
+            {contentToDisplay}
         </StyledDropDownBarContent>
     )
 }
@@ -36,6 +34,8 @@ const DropDownBarContent = ({content}: DropDownBarContentPropsInterface) => {
 const StyledDropDownListContent = styled.div`
   display: flex;
   position: absolute;
+  top: 37px;
+  right: -25px;
   width: 600px;
   height: 580px;
   background-color: coral;
