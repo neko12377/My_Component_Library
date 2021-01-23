@@ -47,7 +47,7 @@ interface DropDownListProsInterface {
 
 export const DropDownList = ({onClick}: DropDownListProsInterface) => {
     const [content, setContent] = useState<string>("");
-    const [showDropDownList, setShowDropDownList] = useState()
+    const [showDropDownList, setShowDropDownList] = useState<boolean>(false)
     const setContentAndOnClick = (content: string) => {
         setContent(content);
         onClick(content);
@@ -55,7 +55,7 @@ export const DropDownList = ({onClick}: DropDownListProsInterface) => {
     return (
         <StyledDropDownBar>
             <DropDownBarContent content={content} />
-            <StyledDropDownListContent/>
+            {showDropDownList && <StyledDropDownListContent/>}
         </StyledDropDownBar>
     )
 }
