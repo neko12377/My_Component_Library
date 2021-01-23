@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import styled from "styled-components";
+import {faClock} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 interface StyledTabPropsInterface {
     tabWidth: string
@@ -28,7 +30,7 @@ const FocusedStyledTab = styled(StyledTab)`
 
 interface TabPropsInterface {
     tabWidth: string;
-    children: string;
+    children: any;
     identity: string;
     onClick: (identity: string) => void;
     currentFocusedTab: string;
@@ -61,11 +63,15 @@ interface TabsPropsInterface {
     onClick: (identity: string) => void;
 }
 
-const TabGroup = styled.div`
+const TabGroup = styled.div.attrs<{
+    className: string;
+}>({
+    className: "tab-group"
+})`
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  width: 55%;
+  width: 70%;
   height: 100%;
   padding-left: 49px;
 `;
@@ -78,13 +84,14 @@ export const Tabs = ({tabNumber, tabTitles, onClick}: TabsPropsInterface) => {
     }
     const generateTabs = () => {
         const howMuchTabs = new Array(tabNumber);
-        const tabWidth = (100 / tabNumber) + "%";
+        // const tabWidth = (100 / tabNumber) + "%";
+        const tabWidth = "300px";
 
         return Array.from(howMuchTabs,(tab, index) => {
             const identity = tabTitles[index] ? tabTitles[index] : "nothing" + index;
             return (
                 <Tab tabWidth={tabWidth} identity={identity} onClick={() => onFocusAndExecuteOnclick(identity)} currentFocusedTab={currentFocusedTab} >
-                    {tabTitles[index] ? tabTitles[index] : ""}
+                    <FontAwesomeIcon icon={faClock} />  {tabTitles[index] ? tabTitles[index] : ""}
                 </Tab>
             )
         })

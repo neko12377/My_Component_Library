@@ -1,6 +1,8 @@
 import React from "react";
 import {Tabs} from "./view/Tabs";
 import "./style.scss"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock } from '@fortawesome/free-solid-svg-icons';
 
 export const App = () => {
     return (
@@ -8,8 +10,8 @@ export const App = () => {
             <section className="header">
                 <div className="header-tabGroup">
                     <Tabs
-                        tabNumber={4}
-                        tabTitles={["ALL", "15 MIN", "1 HOUR", "1 DAY"]}
+                        tabNumber={5}
+                        tabTitles={["ALL", "15 MIN", "1 HOUR", "1 DAY", "FAVORITE"]}
                         onClick={(hello) => {}}
                     />
                 </div>
@@ -30,7 +32,7 @@ export const App = () => {
                 <div className="carousel-arrow"></div>
                 <div className="carousel-infoBlock">
                     <div className="carousel-infoBlock-title">
-                        AUD/USD 23h
+                        AUD/USD <FontAwesomeIcon icon={faClock} />23h
                     </div>
                     <div className="carousel-infoBlock-info">
                         <div className="carousel-infoBlock-info-mainContent">
@@ -43,7 +45,7 @@ export const App = () => {
                 </div>
                 <div className="carousel-infoBlock">
                     <div className="carousel-infoBlock-title">
-                        AUD/USD 15m
+                        AUD/USD <FontAwesomeIcon icon={faClock} />15m
                     </div>
                     <div className="carousel-infoBlock-info">
                         <div className="carousel-infoBlock-info-mainContent">
@@ -56,7 +58,7 @@ export const App = () => {
                 </div>
                 <div className="carousel-infoBlock">
                     <div className="carousel-infoBlock-title">
-                        AUD/USD 1h
+                        AUD/USD <FontAwesomeIcon icon={faClock} />1h
                     </div>
                     <div className="carousel-infoBlock-info">
                         <div className="carousel-infoBlock-info-mainContent">
@@ -69,7 +71,7 @@ export const App = () => {
                 </div>
                 <div className="carousel-infoBlock">
                     <div className="carousel-infoBlock-title">
-                        AUD/USD 15m
+                        AUD/USD <FontAwesomeIcon icon={faClock} />15m
                     </div>
                     <div className="carousel-infoBlock-info">
                         <div className="carousel-infoBlock-info-mainContent">
@@ -82,7 +84,7 @@ export const App = () => {
                 </div>
                 <div className="carousel-infoBlock">
                     <div className="carousel-infoBlock-title">
-                        AUD/USD 15m
+                        AUD/USD <FontAwesomeIcon icon={faClock} />15m
                     </div>
                     <div className="carousel-infoBlock-info">
                         <div className="carousel-infoBlock-info-mainContent">
