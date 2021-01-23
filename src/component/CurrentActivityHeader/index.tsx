@@ -10,9 +10,9 @@ export const CurrentActivityHeader = () => {
                 CURRENT ACTIVITY
             </div>
             <div className="currentActivity-header-expandAssetPopUpLink">
-                <div className="currentActivity-header-expandAssetPopUpLink-description">
-                    View all Trade Actions  <FontAwesomeIcon icon={faSearch}/>
-                </div>
+                {/*<div className="currentActivity-header-expandAssetPopUpLink-description">*/}
+                {/*    View all Trade Actions  <FontAwesomeIcon icon={faSearch}/>*/}
+                {/*</div>*/}
                 <div className="currentActivity-header-expandAssetPopUpLink-magnifierIcon"></div>
             </div>
         </section>
