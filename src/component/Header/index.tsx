@@ -1,8 +1,10 @@
 import {Tabs} from "./component/Tabs";
 import {DropDownList} from "./component/DropDownList";
+import {CollapseSign} from "./component/CollapseSign";
 import React from "react";
 
 import "./style.scss";
+import {CarouselItems} from "../Carousel/CarouselItems";
 
 export const Header = () => {
     return (
@@ -29,7 +31,7 @@ export const Header = () => {
                     />
                     {/*<div className="header-utilityOptions-dropDownList-arrowToExpand" />*/}
                 </div>
-                <div className="header-utilityOptions-collapseSign"></div>
+               <CollapseSign />
             </div>
         </section>
     )

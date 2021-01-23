@@ -6,6 +6,7 @@
   width: 100%;
   height: 183px;
   background-color: rgb(53, 53, 63);
+  overflow: hidden;
 }
 
 .carousel-arrow {
@@ -16,13 +17,28 @@
   height: 100%;
 }
 
-$currencyContentWidth: 20%;
+.carousel-demonstrateBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 100%;
 
-.carousel-infoBlock {
+  //.carousel-infoBlockBackground {
+  //  display: flex;
+  //  justify-content: center;
+  //  align-items: center;
+  //  width: 20%;
+  //  height: 100%;
+  //  background-color: rgb(250, 220, 88);
+  //  border-radius: 4px;
+  //}
+
+  .carousel-infoBlock {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: $currencyContentWidth;
+  width: 100%;
   height: 100%;
   padding: 4px;
 
@@ -112,3 +128,5 @@ $currencyContentWidth: 20%;
     }
   }
 }
+}
+

@@ -9,6 +9,7 @@ import {
 import React from "react";
 import "./style.scss";
 import {connect} from "react-redux";
+import {CarouselItems} from "./CarouselItems";
 
 export const Carousel = () => {
     return (
@@ -16,114 +17,58 @@ export const Carousel = () => {
             <div className="carousel-arrow">
                 <FontAwesomeIcon icon={faChevronLeft}/>
             </div>
-            <div className="carousel-infoBlock">
-                <div className="carousel-infoBlock-title">
-                    AUD/USD <FontAwesomeIcon icon={faClock} />23h
-                </div>
-                <div className="carousel-infoBlock-info">
-                    {true ? (
-                        <div className="carousel-infoBlock-info-container">
-                            <div className="carousel-infoBlock-info-header">
-                                <div className="left-section">
-                                    <div className="left-title">Payout</div>
-                                    <div className="left-money">$2.00</div>
-                                </div>
-                                <div className="right-section">
-                                    <div className="right-title">Market</div>
-                                    <div className="right-number">
-                                        <FontAwesomeIcon icon={faAngleDoubleDown}/> 112.368
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="carousel-infoBlock-info-footer">
-                                <div className="close">Closing: 18:10</div>
-                            </div>
-                        </div>
-                    ) : (
-                        <>
-                            <div className="carousel-infoBlock-info-mainContent">
-                                Trading is closed
-                            </div>
-                            <div className="carousel-infoBlock-info-subContent">
-                                Opening: Monday 06:00 AM
-                            </div>
-                        </>
-                    )}
-                </div>
-            </div>
-            <div className="carousel-infoBlock">
-                <div className="carousel-infoBlock-title">
-                    AUD/USD <FontAwesomeIcon icon={faClock} />15m
-                </div>
-                <div className="carousel-infoBlock-info">
-                    {true ? (
-                        <div className="carousel-infoBlock-info-container">
-                            <div className="carousel-infoBlock-info-header">
-                                <div className="left-section">
-                                    <div className="left-title">Payout</div>
-                                    <div className="left-money">$2.00</div>
-                                </div>
-                                <div className="right-section">
-                                    <div className="right-title">Market</div>
-                                    <div className="right-number">
-                                        <FontAwesomeIcon icon={faAngleDoubleUp}/> 112.368
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="carousel-infoBlock-info-footer">
-                                <div className="close">Closing: 18:10</div>
-                            </div>
-                        </div>
-                    ) : (
-                        <>
-                            <div className="carousel-infoBlock-info-mainContent">
-                                Trading is closed
-                            </div>
-                            <div className="carousel-infoBlock-info-subContent">
-                                Opening: Monday 06:00 AM
-                            </div>
-                        </>
-                    )}
-                </div>
-            </div>
-            <div className="carousel-infoBlock">
-                <div className="carousel-infoBlock-title">
-                    AUD/USD <FontAwesomeIcon icon={faClock} />1h
-                </div>
-                <div className="carousel-infoBlock-info">
-                    <div className="carousel-infoBlock-info-mainContent">
-                        Trading is closed
-                    </div>
-                    <div className="carousel-infoBlock-info-subContent">
-                        Opening: Monday 06:00 AM
-                    </div>
-                </div>
-            </div>
-            <div className="carousel-infoBlock">
-                <div className="carousel-infoBlock-title">
-                    AUD/USD <FontAwesomeIcon icon={faClock} />15m
-                </div>
-                <div className="carousel-infoBlock-info">
-                    <div className="carousel-infoBlock-info-mainContent">
-                        Trading is closed
-                    </div>
-                    <div className="carousel-infoBlock-info-subContent">
-                        Opening: Monday 06:00 AM
-                    </div>
-                </div>
-            </div>
-            <div className="carousel-infoBlock">
-                <div className="carousel-infoBlock-title">
-                    AUD/USD <FontAwesomeIcon icon={faClock} />15m
-                </div>
-                <div className="carousel-infoBlock-info">
-                    <div className="carousel-infoBlock-info-mainContent">
-                        Trading is closed
-                    </div>
-                    <div className="carousel-infoBlock-info-subContent">
-                        Opening: Monday 06:00 AM
-                    </div>
-                </div>
+            <div className="carousel-demonstrateBlock">
+                {
+                    CarouselItems({
+                        infoArray: [
+                            {
+                                currency: "AUD/USD",
+                                timeInterval: "23h",
+                                payout: "Payout",
+                                payoutMoney: "$2.00",
+                                market: "Market",
+                                marketMoney: "112.368",
+                                isOpen: true,
+                            },
+                            {
+                                currency: "AUD/USD",
+                                timeInterval: "15m",
+                                payout: "Payout",
+                                payoutMoney: "$3.00",
+                                market: "Market",
+                                marketMoney: "112.368",
+                                isOpen: true,
+                            },
+                            {
+                                currency: "AUD/USD",
+                                timeInterval: "1h",
+                                payout: "Payout",
+                                payoutMoney: "$9.00",
+                                market: "Market",
+                                marketMoney: "112.368",
+                                isOpen: true,
+                            },
+                            {
+                                currency: "AUD/USD",
+                                timeInterval: "3h",
+                                payout: "Payout",
+                                payoutMoney: "$8.00",
+                                market: "Market",
+                                marketMoney: "112.368",
+                                isOpen: true,
+                            },
+                            {
+                                currency: "BBD/USD",
+                                timeInterval: "3h",
+                                payout: "Payout",
+                                payoutMoney: "$90.00",
+                                market: "Market",
+                                marketMoney: "192.888",
+                                isOpen: false,
+                            },
+                        ],
+                    })
+                }
             </div>
             <div className="carousel-arrow">
                 <FontAwesomeIcon icon={faChevronRight}/>
