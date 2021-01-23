@@ -6,7 +6,7 @@ const chalk = require("chalk");
 const config = {
     mode: "development",
     entry: {
-        index: "./Index",
+        index: "./src/index.tsx",
     },
     output: {
         path: path.resolve("dist"),
@@ -58,7 +58,7 @@ const config = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./index.html",
+            template: "./static/index.html",
         }),
         new CleanWebpackPlugin(),
     ],

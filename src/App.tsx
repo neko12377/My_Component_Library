@@ -1,6 +1,8 @@
 import * as React from "react";
-import { HighLow } from "./page/HIghlow/HIghlow"
+import { HighLowPage } from "./page/HighLowPage"
 import styled from "styled-components";
+import {Provider} from "react-redux";
+import {store} from "./redux/store";
 
 const StyledBackground = styled.div`
   display: flex;
@@ -11,8 +13,12 @@ const StyledBackground = styled.div`
 `
 export const DemoApp = () => {
     return (
-        <StyledBackground>
-            <HighLow />
-        </StyledBackground>
+        <Provider
+            store={store}
+        >
+            <StyledBackground>
+                <HighLowPage />
+            </StyledBackground>
+        </Provider>
     )
 }

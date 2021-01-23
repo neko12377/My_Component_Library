@@ -1,7 +1,7 @@
 {
   "name": "my_component_library",
   "version": "1.0.0",
-  "main": "index.tsx",
+  "main": "src/index.tsx",
   "repository": "git@github.com:neko12377/My_Component_Library.git",
   "author": "Kasper Chen <neko12377@gmail.com>",
   "license": "MIT",
@@ -50,10 +50,13 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "@types/react-redux": "^7.1.16",
     "axios": "^0.21.0",
     "chalk": "^4.1.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5"
   },
   "resolutions": {
     "styled-components": "^5"

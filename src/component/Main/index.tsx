@@ -1,5 +1,5 @@
-import {MainTitle} from "../MainTitle";
-import {MainContent} from "../MainContent";
+import {MainTitle} from "./component/MainTitle";
+import {MainContent} from "./component/MainContent";
 import React from "react";
 import "./style.scss";
 

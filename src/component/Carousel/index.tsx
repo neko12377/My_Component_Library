@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import "./style.scss";
+import {connect} from "react-redux";
 
 export const Carousel = () => {
     return (
@@ -131,3 +132,11 @@ export const Carousel = () => {
         </section>
     )
 }
+
+// const mapStateToProps = (state: any) => {
+//     return {
+//
+//     }
+// }
+//
+// export connect(mapStateToProps)(Carousel);
