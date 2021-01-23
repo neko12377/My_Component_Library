@@ -49,8 +49,9 @@ $tabWidth: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 27px;
+  min-width: 27px;
   height: 30px;
+  margin-right: 4px;
 }
 
 .header-utilityOptions-dropDownList {
@@ -60,14 +61,13 @@ $tabWidth: 25%;
   width: 176px;
   height: 36px;
   padding: 8px 13px;
-  background-color: #1355d6;
+  background-color: rgb(53, 53, 63);
 }
 
 .header-utilityOptions-dropDownBar-content {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: burlywood;
   width: 85%;
   height: 100%;
 }
@@ -385,8 +385,7 @@ $currencyContentWidth: 20%;
   justify-content: center;
   align-items: center;
   width: 50%;
-  height: 62px;
-  margin-bottom: 5px;
+  height: 98%;
   background-color: rgb(248, 206, 80);
   border-radius: 4px;
   border: 2px solid rgb(228, 186, 70);
