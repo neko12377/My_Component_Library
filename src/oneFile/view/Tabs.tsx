@@ -74,6 +74,8 @@ const TabGroup = styled.div.attrs<{
   width: 70%;
   height: 100%;
   padding-left: 49px;
+  
+  font-size: 12px;
 `;
 
 export const Tabs = ({tabNumber, tabTitles, onClick}: TabsPropsInterface) => {

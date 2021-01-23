@@ -128,6 +128,7 @@ $currencyContentWidth: 20%;
   padding: 12px 14px 11px 19px;
   background-color: #131b2b;
   border-radius: 8px 8px 0 0 ;
+  font-weight: bolder;
 }
 
 .carousel-infoBlock-info {
@@ -141,6 +142,44 @@ $currencyContentWidth: 20%;
   font-size: 12px;
   background-color: rgb(35, 35, 45);
   border-radius: 0 0 12px 12px;
+  .carousel-infoBlock-info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .carousel-infoBlock-info-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-bottom: 5px;
+      .left-section {
+        .left-title {
+          font-size: 15px;
+          font-weight: bold;
+        }
+        .left-money {
+          font-size: 20px;
+          font-weight: bolder;
+        }
+      }
+      .right-section {
+        .right-title {
+          font-size: 15px;
+        }
+        .right-number {
+          font-size: 20px;
+          font-weight: bolder;
+        }
+      }
+    }
+    .carousel-infoBlock-info-footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      .close {
+        margin-left: 8px;
+      }
+    }
+  }
 }
 
 .carousel-infoBlock-info-mainContent {
