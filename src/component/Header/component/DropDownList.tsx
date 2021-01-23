@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 
-const StyledDropDownBar = styled.div`
+const StyledDropDownListBar = styled.div`
   display: flex;
   align-items: center;
   width: 176px;
@@ -22,7 +22,7 @@ interface DropDownBarContentPropsInterface {
     content: string;
 }
 
-const DropDownBarContent = ({content}: DropDownBarContentPropsInterface) => {
+const DropDownListBarContent = ({content}: DropDownBarContentPropsInterface) => {
     const contentToDisplay = content ? content : "ALL Assets";
     return (
         <StyledDropDownBarContent>

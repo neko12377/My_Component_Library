@@ -19,7 +19,14 @@ export const Header = () => {
                     view
                 </div>
                 <div className="header-utilityOptions-dropDownList">
-                    <DropDownList onClick={(content) => {console.log(content)}} />
+                    <DropDownList
+                        onSelected={(content: string) => {}}
+                        menuItems={[
+                            {title: "E", catalogue: "8", contentItems: ["fdjlk", "sijfla", "jfaij"]},
+                            {title: "F", catalogue: "9", contentItems: ["))))", "*****", "%%%%%"]},
+                            {title: "G", catalogue: "10", contentItems: ["$$$$", "####", "@@@@"]}
+                        ]}
+                    />
                     {/*<div className="header-utilityOptions-dropDownBar-content">*/}
                     {/*    All Assets*/}
                     {/*</div>*/}
