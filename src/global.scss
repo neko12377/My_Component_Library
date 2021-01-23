@@ -1,8 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body, #root {
   margin: 0;
   height: 100%;
+  color: #fff;
+  font-family: "Microsoft Yahei", "Microsoft JhengHei", "Arial", "PingFang SC", "Helvetica";
 }
-* {
-  box-sizing: border-box;
-  color: white;
+
+button {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
 }

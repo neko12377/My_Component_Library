@@ -3,7 +3,7 @@ import { HighLowPage } from "./page/HighLowPage"
 import styled from "styled-components";
 import {Provider} from "react-redux";
 import {store} from "./redux/store";
-
+import "./global.scss";
 const StyledBackground = styled.div`
   display: flex;
   justify-content: center;

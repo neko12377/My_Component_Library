@@ -8,12 +8,16 @@
   height: 51px;
   background-color: #131b2b;
 
+
+
   .currentActivity-header-title {
     display: flex;
     justify-content: center;
     align-items: center;
     min-width: 160px;
     height: 100%;
+
+    color: #a3a3a3;
 
     .currentActivity-header-expandAssetPopUpLink-description {
       display: flex;
@@ -23,6 +27,7 @@
       height: 100%;
       font-size: 12px;
       //background: orange;
+      color: #a3a3a3;
     }
 
     .currentActivity-header-expandAssetPopUpLink-magnifierIcon {

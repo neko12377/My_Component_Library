@@ -1,8 +1,76 @@
 
 .currentActivity-content {
-  display: flex;
-  justify-content: center;
+  //display: flex;
+  //justify-content: center;
   padding: 30px 29px 24px 31px;
-  height: 105px;
-  background-color: royalblue;
+  //height: 105px;
+  background-color: #35353f;
+  font-size: 14px;
+  table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    border: 0;
+    //font-size: 100%;
+    //font: inherit;
+    vertical-align: baseline;
+    text-align: left;
+  }
+
+  table {
+    // style
+    border-collapse: collapse;
+    border-spacing: 0;
+    thead, tbody {
+      th, td {
+        color: #a3a3a3;
+        padding: 10px;
+      }
+    }
+    // size
+    width: 100%;
+    // color style
+    thead {
+      tr {
+        th {
+          background: #232323;
+        }
+      }
+    }
+    tbody {
+      tr:nth-child(odd) {
+        background-color: #4B4B4B;
+      }
+      tr:nth-child(even) {
+        background-color: #353535;
+      }
+      tr {
+        padding: 10px;
+        td {
+          padding: 10px;
+          &.coin {
+            //text-align: center;
+            svg {
+              margin-left: 8px;
+            }
+          }
+          &.strike {
+            .strike-money {
+              color: #a3a3a3;
+            }
+          }
+          button {
+            width: 100px;
+            background: #EE5726;
+            padding: 10px 0;
+            border: 0;
+            font-weight: lighter;
+            color: #fff;
+          }
+        }
+      }
+
+
+    }
+  }
+
+
 }
