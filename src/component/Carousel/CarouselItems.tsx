@@ -22,6 +22,7 @@ const InfoBlockBackground = styled.div<InfoBlockBackgroundPropsInterfacd>`
   justify-content: center;
   align-items: center;
   width: 20%;
+  min-width: 20%;
   height: 100%;
   background-color: ${ props => props.isFocused ?" rgb(250, 220, 88)" : "none"};
   border-radius: 4px;

@@ -6,71 +6,72 @@ import {
     faChevronRight,
     faClock
 } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./style.scss";
 import {connect} from "react-redux";
 import {CarouselItems} from "./CarouselItems";
+import styled from "styled-components";
 
-export const Carousel = () => {
+interface carouselDemonstrateBlockPropsInterface {
+    xPosition: number;
+}
+
+const CarouselDemonstrateBlock = styled.div<carouselDemonstrateBlockPropsInterface>`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 100%;
+  transform: translateX(${props => props.xPosition}px);
+  transition: transform 1.5s;
+`
+interface CarouselPropsInterface {
+    infoArray: {
+        currency: string;
+        timeInterval: string;
+        payout: string;
+        payoutMoney: string;
+        market: string;
+        marketMoney: string;
+        isOpen: boolean;
+    }[];
+}
+
+export const Carousel = ({infoArray}: CarouselPropsInterface) => {
+    const [xPosition, setXPosition] = useState<number>(0);
+    const [canGoPrevious, setCanGoPrevious] = useState<number>(0);
+    const [canGoNext, setCanGoNext] = useState<number>(infoArray ? (infoArray.length / 5 -1) : 0)
+console.debug(canGoNext)
+    const swapInfoBlocksToPrior = () => {
+        if (canGoPrevious === 0) return
+        setXPosition(xPosition + 1115.3);
+        setCanGoNext(cur => cur + 1);
+        setCanGoPrevious(cur => cur -1);
+    }
+
+    const swapInfoBlocksToNext = () => {
+        if (canGoNext === 0) return
+        setXPosition(xPosition - 1115.3);
+        setCanGoPrevious(cur => cur + 1);
+        setCanGoNext(cur => cur - 1);
+
+    }
+
+    useEffect(() => {
+        setCanGoNext(infoArray.length / 5 - 1);
+    }, [infoArray])
+
     return (
         <section className="carousel">
-            <div className="carousel-arrow">
+            <div className="carousel-arrow" onClick={() => swapInfoBlocksToPrior()}>
                 <FontAwesomeIcon icon={faChevronLeft}/>
             </div>
-            <div className="carousel-demonstrateBlock">
+            <CarouselDemonstrateBlock xPosition={xPosition}>
                 {
-                    CarouselItems({
-                        infoArray: [
-                            {
-                                currency: "AUD/USD",
-                                timeInterval: "23h",
-                                payout: "Payout",
-                                payoutMoney: "$2.00",
-                                market: "Market",
-                                marketMoney: "112.368",
-                                isOpen: true,
-                            },
-                            {
-                                currency: "AUD/USD",
-                                timeInterval: "15m",
-                                payout: "Payout",
-                                payoutMoney: "$3.00",
-                                market: "Market",
-                                marketMoney: "112.368",
-                                isOpen: true,
-                            },
-                            {
-                                currency: "AUD/USD",
-                                timeInterval: "1h",
-                                payout: "Payout",
-                                payoutMoney: "$9.00",
-                                market: "Market",
-                                marketMoney: "112.368",
-                                isOpen: true,
-                            },
-                            {
-                                currency: "AUD/USD",
-                                timeInterval: "3h",
-                                payout: "Payout",
-                                payoutMoney: "$8.00",
-                                market: "Market",
-                                marketMoney: "112.368",
-                                isOpen: true,
-                            },
-                            {
-                                currency: "BBD/USD",
-                                timeInterval: "3h",
-                                payout: "Payout",
-                                payoutMoney: "$90.00",
-                                market: "Market",
-                                marketMoney: "192.888",
-                                isOpen: false,
-                            },
-                        ],
-                    })
+                    CarouselItems({infoArray})
                 }
-            </div>
-            <div className="carousel-arrow">
+            </CarouselDemonstrateBlock>
+            <div className="carousel-arrow" onClick={() => swapInfoBlocksToNext()}>
                 <FontAwesomeIcon icon={faChevronRight}/>
             </div>
 
