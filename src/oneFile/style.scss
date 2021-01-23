@@ -290,17 +290,16 @@ $currencyContentWidth: 20%;
   align-items: flex-start;
   width: 242px;
   height: 100%;
-  background-color: brown;
   margin-left: 18px;
 }
 
 .main-content-tradeInfo-title {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   height: 30px;
-  background-color: gold;
+  font-size: 24px;
 }
 
 .main-content-tradeInfo-investAmountBar {
@@ -311,16 +310,31 @@ $currencyContentWidth: 20%;
   height: 52px;
   padding: 11px 17px;
   background-color: aliceblue;
+  color: gray;
+  font-size: 30px;
 }
 
 .main-content-tradeInfo-investAmountOption {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 34px;
   margin-bottom: 12px;
-  background-color: darkslategrey;
+}
+
+.main-content-tradeInfo-investAmountOption-Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32.5%;
+  height: 100%;
+  background-color: rgb(79, 79, 89);
+}
+
+.main-content-tradeInfo-investAmountOption-Button-Focused {
+  @extend .main-content-tradeInfo-investAmountOption-Button;
+  background-color: rgb(123, 123, 133);
 }
 
 .main-content-tradeInfo-utility {
@@ -330,17 +344,40 @@ $currencyContentWidth: 20%;
   width: 100%;
   height: 68px;
   margin-bottom: 5px;
-  background-color: dodgerblue;
 }
 
 .main-content-tradeInfo-utility-highLowButton {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   width: 50%;
   height: 68px;
   margin-right: 10px;
-  background-color: hotpink;
+}
+
+.main-content-tradeInfo-utility-highLowButton-high {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 49%;
+  background-color: rgb(154, 193, 79);
+  border: 2px solid rgb(154, 233, 99);
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px 0 rgb(50 , 50, 50);
+}
+
+.main-content-tradeInfo-utility-highLowButton-low {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 49%;
+  border: 2px solid rgb(247, 123, 66);
+  background-color: rgb(217, 103, 66);
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px 0 rgb(50 , 50, 50);
 }
 
 .main-content-tradeInfo-utility-investButton {
@@ -350,26 +387,30 @@ $currencyContentWidth: 20%;
   width: 50%;
   height: 62px;
   margin-bottom: 5px;
-  background-color: darkolivegreen;
+  background-color: rgb(248, 206, 80);
+  border-radius: 4px;
+  border: 2px solid rgb(228, 186, 70);
+  box-shadow: 2px 2px 5px 0 rgb(30, 30, 30);
+  font-size: 30px;
 }
 
 .main-content-tradeInfo-payout {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 19px;
-  background-color: darkgrey;
+  font-size: 12px;
 }
 
 .main-content-tradeInfo-return {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 19px;
   margin-top: 4px;
-  background-color: aqua;
+  font-size: 12px;
 }
 
 .currentActivity-header {
