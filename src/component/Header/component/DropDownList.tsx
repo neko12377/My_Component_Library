@@ -41,6 +41,7 @@ const StyledDropDownListContentBlock = styled.div`
   width: 600px;
   height: 580px;
   background-color: coral;
+  z-index: 1000;
 `;
 
 const Shelter = styled.div`
@@ -51,6 +52,7 @@ const Shelter = styled.div`
   width: ${window.innerWidth}px;
   height: ${window.innerHeight}px;
   background-color: rgba(0, 0, 0, 0.2);
+  z-index: 999;
 `;
 
 const DropDownListMenu = styled.div`
