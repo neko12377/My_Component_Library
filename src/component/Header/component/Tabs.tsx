@@ -92,7 +92,7 @@ export const Tabs = ({tabNumber, tabTitles, onClick}: TabsPropsInterface) => {
         return Array.from(howMuchTabs,(tab, index) => {
             const identity = tabTitles[index] ? tabTitles[index] : "nothing" + index;
             return (
-                <Tab tabWidth={tabWidth} identity={identity} onClick={() => onFocusAndExecuteOnclick(identity)} currentFocusedTab={currentFocusedTab} >
+                <Tab tabWidth={tabWidth} identity={identity} onClick={onFocusAndExecuteOnclick} currentFocusedTab={currentFocusedTab} >
                     <FontAwesomeIcon icon={faClock} />  {tabTitles[index] ? tabTitles[index] : ""}
                 </Tab>
             )
