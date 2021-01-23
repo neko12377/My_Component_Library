@@ -202,7 +202,7 @@
       }
     }
   }
-}
+
 
 .main-title {
   display: flex;
@@ -229,14 +229,14 @@
     font-size: 23px;
   }
 
-.main-title-riseDeclineArrow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 16px;
-  height: 100%;
-  margin-left: 36px;
-}
+  .main-title-riseDeclineArrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 100%;
+    margin-left: 36px;
+  }
 
   .main-title-currencyNum {
     display: flex;
@@ -255,14 +255,14 @@
     height: 100%;
   }
 
-.main-title-banSign {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 15px;
-  height: 100%;
-  margin-right: 4px;
-}
+  .main-title-banSign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 100%;
+    margin-right: 4px;
+  }
 
   .main-title-endTime {
     display: flex;
@@ -281,50 +281,51 @@
     margin-right: 32px;
   }
 
-.main-title-clockSign {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 17px;
-  height: 100%;
-  margin-right: 4px;
-}
-
-.main-title-oneClickTrading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 22px;
-  height: 100%;
-}
-
-  .main-content-block {
+  .main-title-clockSign {
     display: flex;
-    justify-content: space-around;
-    padding: 32px 29px 14px 31px;
-    background-color: rgb(53, 53, 63);
-    width: 100%;
-    height: 346px;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 100%;
+    margin-right: 4px;
+  }
+
+  .main-title-oneClickTrading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 100%;
   }
 }
 
-.main-content-tradeBar {
+.main-content-block {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 78px;
-  height: 100%;
-  background-color: cadetblue;
+  justify-content: space-around;
+  padding: 32px 29px 14px 31px;
+  background-color: rgb(53, 53, 63);
+  width: 100%;
+  height: 346px;
+
+  .main-content-tradeBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 78px;
+    height: 100%;
+    background-color: cadetblue;
+  }
+
+  .main-content-canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 792px;
+    height: 100%;
+    background-color: lightgreen;
+  }
 }
 
-.main-content-canvas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 792px;
-  height: 100%;
-  background-color: lightgreen;
-}
 
 .main-content-tradeInfo {
   display: flex;
