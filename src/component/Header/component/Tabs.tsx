@@ -41,15 +41,15 @@ const Tab = ({tabWidth, children, identity, onClick, currentFocusedTab}: TabProp
     return (
         identity === currentFocusedTab
             ? (
-                <FocusedStyledTab tabWidth={tabWidth}>
-                    <div onClick={() => onClick && onClick(identity)}>
+                <FocusedStyledTab tabWidth={tabWidth} onClick={() => onClick && onClick(identity)}>
+                    <div>
                         {children}
                     </div>
                 </FocusedStyledTab>
             )
             : (
-                <StyledTab tabWidth={tabWidth}>
-                    <div onClick={() => onClick && onClick(identity)}>
+                <StyledTab tabWidth={tabWidth} onClick={() => onClick && onClick(identity)}>
+                    <div>
                         {children}
                     </div>
                 </StyledTab>
