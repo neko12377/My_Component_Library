@@ -71,7 +71,7 @@ const TabGroup = styled.div.attrs<{
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  width: 70%;
+  width: 100%;
   height: 100%;
   padding-left: 49px;
   
@@ -87,8 +87,8 @@ export const Tabs = ({tabNumber, tabTitles, onClick}: TabsPropsInterface) => {
     const generateTabs = () => {
         const howMuchTabs = new Array(tabNumber);
         // TODO
-        // const tabWidth = (100 / tabNumber) + "%";
-        const tabWidth = "300px";
+        const tabWidth = (100 / tabNumber) + "%";
+        // const tabWidth = "300px";
         return Array.from(howMuchTabs,(tab, index) => {
             const identity = tabTitles[index] ? tabTitles[index] : "nothing" + index;
             return (

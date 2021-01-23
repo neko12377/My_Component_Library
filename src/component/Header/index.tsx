@@ -27,10 +27,7 @@ export const Header = () => {
                             {title: "G", catalogue: "10", contentItems: ["$$$$", "####", "@@@@"]}
                         ]}
                     />
-                    {/*<div className="header-utilityOptions-dropDownBar-content">*/}
-                    {/*    All Assets*/}
-                    {/*</div>*/}
-                    <div className="header-utilityOptions-dropDownList-arrowToExpand" />
+                    {/*<div className="header-utilityOptions-dropDownList-arrowToExpand" />*/}
                 </div>
                 <div className="header-utilityOptions-collapseSign"></div>
             </div>

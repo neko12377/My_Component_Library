@@ -1,10 +1,12 @@
-import React, {useState} from "react";
+import React, {useState, useRef, forwardRef} from "react";
 import styled from "styled-components";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faChevronDown} from "@fortawesome/free-solid-svg-icons";
 
 const StyledDropDownListBar = styled.div`
   display: flex;
   align-items: center;
-  width: 176px;
+  width: 100%;
   height: 36px;
   padding: 8px 0;
   position: relative;
@@ -34,11 +36,21 @@ const DropDownListBarContent = ({content}: DropDownBarContentPropsInterface) => 
 const StyledDropDownListContentBlock = styled.div`
   display: flex;
   position: absolute;
-  top: 37px;
-  right: -25px;
+  top: 40px;
+  right: -5px;
   width: 600px;
   height: 580px;
   background-color: coral;
+`;
+
+const Shelter = styled.div`
+  display: flex;
+  position: absolute;
+  top: -12px;
+  right: ${- window.innerWidth / 6.5}px;
+  width: ${window.innerWidth}px;
+  height: ${window.innerHeight}px;
+  background-color: rgba(0, 0, 0, 0.2);
 `;
 
 const DropDownListMenu = styled.div`
@@ -96,18 +108,26 @@ const ListContent = styled.div`
   height: 70px;
   border: 2px solid saddlebrown;
   cursor: pointer;
-  
+`;
+
+const IconWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 100%;
+  cursor: pointer;
 `;
 
 interface DropDownListContentBlockPropsInterface {
     currentPickedContent: string;
-    menuItems: { title: string, catalogue: string, contentItems: string[]}[];
+    menuItems: { title: string, catalogue: string, contentItems: string[] }[];
     onSelected: (selectedContent: string) => void;
+    showDropDownList: () => void;
 }
-
-const DropDownListContentBlock = ({currentPickedContent, menuItems, onSelected}: DropDownListContentBlockPropsInterface) => {
+const DropDownListContentBlock = ({currentPickedContent, menuItems, onSelected, showDropDownList}: DropDownListContentBlockPropsInterface) => {
     const [currentCatalogue, setCurrentCatalogue] = useState<string>(menuItems[0] ? menuItems[0].catalogue : "");
-    const [currentTitle, setCurrentTitle] = useState<string>(menuItems[0] ? menuItems[0].title : "")
+    const [currentTitle, setCurrentTitle] = useState<string>(menuItems[0] ? menuItems[0].title : "");
     const selectCatalogue= (currentCatalogue: string, currentTitle: string) => {
        setCurrentCatalogue(currentCatalogue);
        setCurrentTitle(currentTitle);
@@ -140,20 +160,24 @@ const DropDownListContentBlock = ({currentPickedContent, menuItems, onSelected}:
     })
 
     return (
-        <StyledDropDownListContentBlock>
-            <DropDownListMenu>
-                <ListMenuTitle>
-                    {currentTitle}
-                </ListMenuTitle>
-                {menu}
-            </DropDownListMenu>
-            <DropDownListContent>
-                <ListContentTitle>
-                    999xiA
-                </ListContentTitle>
-                {contentList}
-            </DropDownListContent>
-        </StyledDropDownListContentBlock>
+        <>
+            <Shelter onClick={() => showDropDownList()} />
+            <StyledDropDownListContentBlock>
+                <DropDownListMenu>
+                    <ListMenuTitle>
+                        {currentTitle}
+                    </ListMenuTitle>
+                    {menu}
+                </DropDownListMenu>
+                <DropDownListContent>
+                    <ListContentTitle>
+                        999xiA
+                    </ListContentTitle>
+                    {contentList}
+                </DropDownListContent>
+            </StyledDropDownListContentBlock>
+        </>
+
     )
 }
 
@@ -164,22 +188,31 @@ interface DropDownListProsInterface {
 
 export const DropDownList = ({onSelected, menuItems}: DropDownListProsInterface) => {
     const [currentPickedContent, setCurrentPickedContent] = useState<string>("");
-    const [showDropDownList, setShowDropDownList] = useState<boolean>(true)
+    const [isShowDropDownList, setIsShowDropDownList] = useState<boolean>(false);
     const setContentAndOnClick = (selectedContent: string) => {
         setCurrentPickedContent(selectedContent);
         onSelected(selectedContent);
     }
+
+    const showDropDownList = () => {
+        setIsShowDropDownList(!isShowDropDownList);
+    }
+
     return (
         <StyledDropDownListBar>
             <DropDownListBarContent content={currentPickedContent} />
             {
-                showDropDownList
+                isShowDropDownList
                     && <DropDownListContentBlock
                             currentPickedContent={currentPickedContent}
                             onSelected={setContentAndOnClick}
                             menuItems={menuItems}
+                            showDropDownList={showDropDownList}
                         />
             }
+            <IconWrapper onClick={() => showDropDownList()}>
+                <FontAwesomeIcon icon={faChevronDown} />
+            </IconWrapper>
         </StyledDropDownListBar>
     )
 }
