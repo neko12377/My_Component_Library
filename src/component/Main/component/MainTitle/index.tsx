@@ -3,7 +3,11 @@ import {faAngleDoubleUp, faExchangeAlt, faHistory, faTimesCircle} from "@fortawe
 import React from "react";
 import "./style.scss";
 
-export const MainTitle = () => {
+interface MainTitlePropsInterface {
+    switchHighLowMode: () => void;
+}
+
+export const MainTitle = ({switchHighLowMode}: MainTitlePropsInterface) => {
     return (
         <section className="main-title">
             <div className="main-title-leftSide">
@@ -30,8 +34,8 @@ export const MainTitle = () => {
                     </div>
                     7:25:42
                 </div>
-                <div className="main-title-oneClickTrading">
-                    <FontAwesomeIcon icon={faExchangeAlt}/>
+                <div className="main-title-oneClickTrading" onClick={() => switchHighLowMode()}>
+                    <FontAwesomeIcon icon={faExchangeAlt} />
                 </div>
             </div>
         </section>
