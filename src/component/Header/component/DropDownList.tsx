@@ -1,24 +1,7 @@
-import React, {useState, useRef, forwardRef} from "react";
-import styled from "styled-components";
+import React, {useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronDown} from "@fortawesome/free-solid-svg-icons";
-
-const StyledDropDownListBar = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 36px;
-  padding: 8px 0;
-  position: relative;
-`;
-
-const StyledDropDownBarContent = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 85%;
-  height: 100%;
-`;
+import * as styleC from "./DropDownListStyledComponent"
 
 interface DropDownBarContentPropsInterface {
     content: string;
@@ -27,107 +10,11 @@ interface DropDownBarContentPropsInterface {
 const DropDownListBarContent = ({content}: DropDownBarContentPropsInterface) => {
     const contentToDisplay = content ? content : "ALL Assets";
     return (
-        <StyledDropDownBarContent>
+        <styleC.StyledDropDownBarContent>
             {contentToDisplay}
-        </StyledDropDownBarContent>
+        </styleC.StyledDropDownBarContent>
     )
 }
-
-const StyledDropDownListContentBlock = styled.div`
-  display: flex;
-  position: absolute;
-  top: 40px;
-  right: -5px;
-  width: 600px;
-  height: 580px;
-  z-index: 1000;
-  border-radius: 4px;
-`;
-
-const Shelter = styled.div`
-  display: flex;
-  position: absolute;
-  top: -12px;
-  right: ${- window.innerWidth / 7}px;
-  width: ${window.innerWidth}px;
-  height: ${window.innerHeight}px;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 999;
-`;
-
-const DropDownListMenu = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(28, 28, 40);
-  width: 45%;
-  height: 100%;
-  border-radius: 4px 0 0 4px;
-`;
-
-const DropDownListContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(30, 30, 40);
-  width: 55%;
-  height: 100%;
-  border-radius: 0 4px 4px 0;
-`;
-
-const ListMenuTitle = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: 100px;
-  padding-left: 10px; 
-`;
-
-const ListMenuItem = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 70px;
-  cursor: pointer;
-  &:hover {
-    background-color: rgb(38, 38, 40);
-  }
-`;
-
-const ListContentTitle = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: 100px;
-  padding-left: 5px;
-`;
-
-const ListContent = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100px;
-  height: 70px;
-  cursor: pointer;
-  padding-left: 10px;
-  &:hover {
-    background-color: rgb(40, 40, 50);
-  }
-`;
-
-const IconWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-  border-radius: 50%;
-  &:hover {
-    background-color: #6e6e7c;
-  }
-`;
 
 interface DropDownListContentBlockPropsInterface {
     currentPickedContent: string;
@@ -144,9 +31,9 @@ const DropDownListContentBlock = ({currentPickedContent, menuItems, onSelected, 
     }
     const menu = menuItems.map((item) => {
         return (
-                <ListMenuItem onClick={() => selectCatalogue(item.catalogue, item.title)}>
+                <styleC.ListMenuItem onClick={() => selectCatalogue(item.catalogue, item.title)}>
                     {item.catalogue}
-                </ListMenuItem>
+                </styleC.ListMenuItem>
         )
     })
 
@@ -155,14 +42,14 @@ const DropDownListContentBlock = ({currentPickedContent, menuItems, onSelected, 
             return item.contentItems.map((item) => {
                 return currentPickedContent === item
                     ? (
-                        <ListContent onClick={() => onSelected(item)}>
-                            {item + "SELECTED"}
-                        </ListContent>
+                        <styleC.ListContent onClick={() => onSelected(item)}>
+                            {item + "_SELECTED"}
+                        </styleC.ListContent>
                     )
                     : (
-                        <ListContent onClick={() => onSelected(item)}>
+                        <styleC.ListContent onClick={() => onSelected(item)}>
                             {item}
-                        </ListContent>
+                        </styleC.ListContent>
                     )
             })
         }
@@ -171,21 +58,21 @@ const DropDownListContentBlock = ({currentPickedContent, menuItems, onSelected, 
 
     return (
         <>
-            <Shelter onClick={() => showDropDownList()} />
-            <StyledDropDownListContentBlock>
-                <DropDownListMenu>
-                    <ListMenuTitle>
+            <styleC.Shelter onClick={showDropDownList} />
+            <styleC.StyledDropDownListContentBlock>
+                <styleC.DropDownListMenu>
+                    <styleC.ListMenuTitle>
                         {currentTitle}
-                    </ListMenuTitle>
+                    </styleC.ListMenuTitle>
                     {menu}
-                </DropDownListMenu>
-                <DropDownListContent>
-                    <ListContentTitle>
+                </styleC.DropDownListMenu>
+                <styleC.DropDownListContent>
+                    <styleC.ListContentTitle>
                         999xiA
-                    </ListContentTitle>
+                    </styleC.ListContentTitle>
                     {contentList}
-                </DropDownListContent>
-            </StyledDropDownListContentBlock>
+                </styleC.DropDownListContent>
+            </styleC.StyledDropDownListContentBlock>
         </>
 
     )
@@ -209,7 +96,7 @@ export const DropDownList = ({onSelected, menuItems}: DropDownListProsInterface)
     }
 
     return (
-        <StyledDropDownListBar>
+        <styleC.StyledDropDownListBar>
             <DropDownListBarContent content={currentPickedContent} />
             {
                 isShowDropDownList
@@ -220,9 +107,9 @@ export const DropDownList = ({onSelected, menuItems}: DropDownListProsInterface)
                             showDropDownList={showDropDownList}
                         />
             }
-            <IconWrapper onClick={() => showDropDownList()}>
+            <styleC.IconWrapper onClick={() => showDropDownList()}>
                 <FontAwesomeIcon icon={faChevronDown} />
-            </IconWrapper>
-        </StyledDropDownListBar>
+            </styleC.IconWrapper>
+        </styleC.StyledDropDownListBar>
     )
 }

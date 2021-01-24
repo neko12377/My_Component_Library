@@ -3,61 +3,67 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAngleDoubleDown, faCoins, faAngleDoubleUp} from "@fortawesome/free-solid-svg-icons";
 
 interface ColumnPropsInterface {
-    asset: string;
-    strike: number;
-    startTime: string;
-    expiry: string;
-    status: string;
-    closingRate: string;
-    investment: string;
-    payOut: string;
-    isUp: boolean;
-    takePayout: string;
+    activityData: {
+        asset: string;
+        strike: number;
+        startTime: string;
+        expiry: string;
+        status: string;
+        closingRate: string;
+        investment: string;
+        payOut: string;
+        isUp: boolean;
+        takePayout: string;
+    };
+    popUp: () => void;
 }
 
-const Column = ({asset, strike, startTime, expiry, status, closingRate, investment, payOut, isUp, takePayout}: ColumnPropsInterface) => {
+const Column = ({activityData, popUp}: ColumnPropsInterface) => {
     return (
         <tr>
             <td className="coin">
                 <FontAwesomeIcon icon={faCoins}/>
             </td>
-            <td>{asset}</td>
+            <td>{activityData.asset}</td>
             <td className="strike">
                 {
-                    isUp
+                    activityData.isUp
                         ? (<FontAwesomeIcon icon={faAngleDoubleUp} color="red" />)
                         : (<FontAwesomeIcon icon={faAngleDoubleDown} color="lightgreen" />)
                 }
-                <span className="strike-money">{strike}</span>
+                <span className="strike-money">{activityData.strike}</span>
             </td>
-            <td>{startTime}</td>
-            <td>{expiry}</td>
-            <td>{status}</td>
-            <td>{closingRate}</td>
-            <td>{investment}</td>
-            <td>{payOut}</td>
+            <td>{activityData.startTime}</td>
+            <td>{activityData.expiry}</td>
+            <td>{activityData.status}</td>
+            <td>{activityData.closingRate}</td>
+            <td>{activityData.investment}</td>
+            <td>{activityData.payOut}</td>
             <td>
-                <button>{takePayout}</button>
+                <button onClick={popUp}>{activityData.takePayout}</button>
             </td>
         </tr>
     )
 }
 
 interface ActivityDataInterface {
-    asset: string;
-    strike: number;
-    startTime: string;
-    expiry: string;
-    status: string;
-    closingRate: string;
-    investment: string;
-    payOut: string;
-    isUp: boolean;
-    takePayout: string;
+    activityData: {
+        asset: string;
+        strike: number;
+        startTime: string;
+        expiry: string;
+        status: string;
+        closingRate: string;
+        investment: string;
+        payOut: string;
+        isUp: boolean;
+        takePayout: string;
+    }[];
+    popUp: () => void;
 }
 
-export const Columns = (activityData: ActivityDataInterface[]) => {
-    return activityData.map((datum) => {
-        return Column(datum);
+export const Columns = ({activityData, popUp}: ActivityDataInterface) => {
+    return activityData.map((activityData) => {
+        return Column({activityData, popUp});
     })
 }

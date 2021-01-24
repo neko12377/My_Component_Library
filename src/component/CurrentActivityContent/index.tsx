@@ -1,11 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 import "./style.scss";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCoins, faAngleDoubleDown} from "@fortawesome/free-solid-svg-icons";
 import {activityData} from "./fakeData";
 import {Columns} from "./Columns";
+import {TakePayoutPopOut} from "./TakePayoutPopOut";
+
+const payoutInfo = {
+    currency: "USD/JPY",
+    currencyAmount: 118.946,
+    isUp: true,
+    strike: 118.627,
+    strikeIsUp: false,
+    investment: "$500",
+    returnRate: 0.065,
+    payout: "$32.50",
+}
 
 export const CurrentActivityContent = () => {
+    const [showPopUp, setShowPopUp] = useState<boolean>(false);
+    const popUp = () => {
+        setShowPopUp(!showPopUp);
+    }
     return (
         <section className="currentActivity-content">
             <table>
@@ -24,9 +38,10 @@ export const CurrentActivityContent = () => {
                 </tr>
                 </thead>
                 <tbody>
-                    {Columns(activityData)}
+                    {Columns({activityData, popUp})}
                 </tbody>
             </table>
+            {showPopUp && TakePayoutPopOut({payoutInfo, popUp})}
         </section>
     )
 }

@@ -4,6 +4,7 @@
   //justify-content: center;
   padding: 30px 29px 24px 31px;
   //height: 105px;
+  position: relative;
   background-color: #35353f;
   font-size: 14px;
   table, caption, tbody, tfoot, thead, tr, th, td {
@@ -74,10 +75,138 @@
           }
         }
       }
-
-
     }
   }
+  .takePayoutPopOut {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -200px;
+    left: 100px;
+    width: 342px;
+    height: 390px;
+    background-color: rgba(137, 137, 137, 0.8);
+    border-radius: 4px;
+    z-index: 1000;
 
+    .takePayoutPopOut-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px 0 20px;
+      width: 322px;
+      height: 62px;
+      background-color: #131b2b;
+      font-size: 22px;
+      border-radius: 4px 4px 0 0;
 
+      .takePayoutPopOut-title-closeSign {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+          background-color: #5a5858;
+        }
+      }
+    }
+
+    .takePayoutPopOut-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px 50px;
+      align-items: center;
+      width: 322px;
+      height: 308px;
+      background-color: rgb(53, 53, 63);
+      border-radius: 0 0 4px 4px;
+
+      .takePayoutPopOut-body-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        width: 262px;
+        height: 50px;
+        background-color: #222b3c;
+        border-radius: 4px 4px 0 0;
+        font-size: 18px;
+
+        .takePayoutPopOut-body-title-name {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          height: 100%;
+        }
+
+        .takePayoutPopOut-body-title-number {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          height: 100%;
+
+          .takePayoutPopOut-body-title-number-number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 5px;
+          }
+        }
+      }
+
+      .takePayoutPopOut-body-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5px;
+        width: 262px;
+        height: 125px;
+        background-color: rgb(35, 35, 45);
+        margin-bottom: 25px;
+        border-radius: 0 0 4px 4px;
+
+        .takePayoutPopOut-body-body-column {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 10px;
+          width: 100%;
+
+          .takePayoutPopOut-body-body-strikeColumn {
+            display: flex;
+            justify-content: flex-end;
+            justify-items: center;
+            height: 100%;
+
+            .takePayoutPopOut-body-body-strikeColumn-number {
+              display: flex;
+              justify-content: flex-end;
+              justify-items: center;
+              height: 100%;
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+
+      .takPayOut-body-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 262px;
+        height: 48px;
+        background-color: rgb(250, 204, 67);
+        border-radius: 8px;
+        border-bottom: 3px solid #e78711;
+        color: #131b2b;
+      }
+    }
+  }
 }
