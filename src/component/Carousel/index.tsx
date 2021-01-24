@@ -41,7 +41,7 @@ export const Carousel = ({infoArray}: CarouselPropsInterface) => {
     const [xPosition, setXPosition] = useState<number>(0);
     const [canGoPrevious, setCanGoPrevious] = useState<number>(0);
     const [canGoNext, setCanGoNext] = useState<number>(infoArray ? (infoArray.length / 5 -1) : 0)
-console.debug(canGoNext)
+
     const swapInfoBlocksToPrior = () => {
         if (canGoPrevious === 0) return
         setXPosition(xPosition + 1115.3);

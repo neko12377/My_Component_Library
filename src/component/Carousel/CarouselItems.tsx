@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAngleDoubleDown, faClock} from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
@@ -11,6 +11,10 @@ interface CarouselItemHeaderPropsInterface {
     market: string;
     marketMoney: string;
     isOpen: boolean;
+    isFocused?: boolean;
+    onClick: (id: string) => void;
+    //@Todo if there is data we don't need index as identifier anymore
+    index: number;
 }
 
 interface InfoBlockBackgroundPropsInterfacd {
@@ -29,13 +33,13 @@ const InfoBlockBackground = styled.div<InfoBlockBackgroundPropsInterfacd>`
   cursor: pointer;
 `
 
-const CarouselItem = ({currency, timeInterval, payout, payoutMoney, market, marketMoney, isOpen}: CarouselItemHeaderPropsInterface) => {
-    const [isFocused, setIsFocused] = useState<boolean>(false)
-    const switchFocusedStatus = () => {
-        setIsFocused(!isFocused);
+const CarouselItem = ({currency, timeInterval, payout, payoutMoney, market, marketMoney, isOpen, onClick, index, isFocused}: CarouselItemHeaderPropsInterface) => {
+    const switchFocusedStatus = (id: string) => {
+        onClick(id)
     }
+
     return (
-        <InfoBlockBackground isFocused={isFocused} onClick={() => switchFocusedStatus()}>
+        <InfoBlockBackground isFocused={isFocused as boolean} onClick={() => switchFocusedStatus(currency + index)}>
             <div className="carousel-infoBlock">
             <div className="carousel-infoBlock-title">
                 {currency} <FontAwesomeIcon icon={faClock} /> {timeInterval}
@@ -88,7 +92,29 @@ interface CarouselItemsPropsInterface {
 }
 
 export const CarouselItems = ({infoArray}: CarouselItemsPropsInterface) => {
+    const [currentSelectedBlock, setCurrentSelectedBlock] = useState<string>("");
+    const manageWhoIsOnFocused = (id: string) => {
+        setCurrentSelectedBlock(id);
+    };
+
     return infoArray.map((info, index) => {
+        if ((info.currency + index) === currentSelectedBlock) {
+            return (
+                <CarouselItem
+                    currency={info.currency}
+                    timeInterval={info.timeInterval}
+                    payout={info.payout}
+                    payoutMoney={info.payoutMoney}
+                    market={info.market}
+                    marketMoney={info.marketMoney}
+                    isOpen={info.isOpen}
+                    key={info.currency + "_" + index}
+                    onClick={manageWhoIsOnFocused}
+                    index={index}
+                    isFocused
+                />
+            )
+        }
         return (
             <CarouselItem
                 currency={info.currency}
@@ -99,6 +125,8 @@ export const CarouselItems = ({infoArray}: CarouselItemsPropsInterface) => {
                 marketMoney={info.marketMoney}
                 isOpen={info.isOpen}
                 key={info.currency + "_" + index}
+                onClick={manageWhoIsOnFocused}
+                index={index}
             />
         )
     })

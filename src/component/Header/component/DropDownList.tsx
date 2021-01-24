@@ -40,15 +40,15 @@ const StyledDropDownListContentBlock = styled.div`
   right: -5px;
   width: 600px;
   height: 580px;
-  background-color: coral;
   z-index: 1000;
+  border-radius: 4px;
 `;
 
 const Shelter = styled.div`
   display: flex;
   position: absolute;
   top: -12px;
-  right: ${- window.innerWidth / 6.5}px;
+  right: ${- window.innerWidth / 7}px;
   width: ${window.innerWidth}px;
   height: ${window.innerHeight}px;
   background-color: rgba(0, 0, 0, 0.2);
@@ -58,27 +58,28 @@ const Shelter = styled.div`
 const DropDownListMenu = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: crimson;
+  background-color: rgb(28, 28, 40);
   width: 45%;
   height: 100%;
+  border-radius: 4px 0 0 4px;
 `;
 
 const DropDownListContent = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: blue;
+  background-color: rgb(30, 30, 40);
   width: 55%;
   height: 100%;
+  border-radius: 0 4px 4px 0;
 `;
 
 const ListMenuTitle = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border: saddlebrown 2px solid;
   width: 100%;
   height: 100px;
-  padding-left: 5px; 
+  padding-left: 10px; 
 `;
 
 const ListMenuItem = styled.div`
@@ -87,7 +88,6 @@ const ListMenuItem = styled.div`
   align-items: center;
   width: 100px;
   height: 70px;
-  border: 1px solid black;
   cursor: pointer;
 `;
 
@@ -95,7 +95,6 @@ const ListContentTitle = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border: saddlebrown 2px solid;
   width: 100%;
   height: 100px;
   padding-left: 5px;
@@ -108,7 +107,6 @@ const ListContent = styled.div`
   align-items: center;
   width: 100px;
   height: 70px;
-  border: 2px solid saddlebrown;
   cursor: pointer;
 `;
 
