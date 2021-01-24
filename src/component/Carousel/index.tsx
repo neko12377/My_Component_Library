@@ -34,6 +34,7 @@ interface CarouselPropsInterface {
         market: string;
         marketMoney: string;
         isOpen: boolean;
+        isUp: boolean;
     }[];
 }
 

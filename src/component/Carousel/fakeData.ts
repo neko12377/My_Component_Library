@@ -7,6 +7,7 @@ export const infoArray = [
         market: "Market",
         marketMoney: "112.368",
         isOpen: true,
+        isUp: true,
     },
     {
         currency: "AUD/USD",
@@ -16,6 +17,7 @@ export const infoArray = [
         market: "Market",
         marketMoney: "112.368",
         isOpen: true,
+        isUp: true,
     },
     {
         currency: "AUD/USD",
@@ -25,6 +27,7 @@ export const infoArray = [
         market: "Market",
         marketMoney: "112.368",
         isOpen: true,
+        isUp: false,
     },
     {
         currency: "AUD/USD",
@@ -34,6 +37,7 @@ export const infoArray = [
         market: "Market",
         marketMoney: "112.368",
         isOpen: true,
+        isUp: true,
     },
     {
         currency: "BBD/USD",
@@ -43,6 +47,7 @@ export const infoArray = [
         market: "Market",
         marketMoney: "192.888",
         isOpen: false,
+        isUp: false,
     },
     {
         currency: "AUD/USD",
@@ -52,6 +57,7 @@ export const infoArray = [
         market: "Market",
         marketMoney: "112.368",
         isOpen: true,
+        isUp: false,
     },
     {
         currency: "AUD/USD",
@@ -61,6 +67,7 @@ export const infoArray = [
         market: "Market",
         marketMoney: "112.368",
         isOpen: true,
+        isUp: true,
     },
     {
         currency: "AUD/USD",
@@ -70,6 +77,7 @@ export const infoArray = [
         market: "Market",
         marketMoney: "112.368",
         isOpen: true,
+        isUp: false,
     },
     {
         currency: "AUD/USD",
@@ -79,6 +87,7 @@ export const infoArray = [
         market: "Market",
         marketMoney: "112.368",
         isOpen: true,
+        isUp: true,
     },
     {
         currency: "BBD/USD",
@@ -88,6 +97,7 @@ export const infoArray = [
         market: "Market",
         marketMoney: "192.888",
         isOpen: false,
+        isUp: false,
     },
     {
         currency: "AUD/USD",
@@ -97,6 +107,7 @@ export const infoArray = [
         market: "Market",
         marketMoney: "112.368",
         isOpen: true,
+        isUp: false,
     },
     {
         currency: "AUD/USD",
@@ -106,6 +117,7 @@ export const infoArray = [
         market: "Market",
         marketMoney: "112.368",
         isOpen: true,
+        isUp: true,
     },
     {
         currency: "AUD/USD",
@@ -115,6 +127,7 @@ export const infoArray = [
         market: "Market",
         marketMoney: "112.368",
         isOpen: true,
+        isUp: true,
     },
     {
         currency: "AUD/USD",
@@ -124,6 +137,7 @@ export const infoArray = [
         market: "Market",
         marketMoney: "112.368",
         isOpen: true,
+        isUp: false,
     },
     {
         currency: "BBD/USD",
@@ -133,5 +147,6 @@ export const infoArray = [
         market: "Market",
         marketMoney: "192.888",
         isOpen: false,
+        isUp: true,
     },
 ]

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faAngleDoubleDown, faClock} from "@fortawesome/free-solid-svg-icons";
+import {faAngleDoubleDown, faClock, faAngleDoubleUp} from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
 interface CarouselItemHeaderPropsInterface {
@@ -13,6 +13,7 @@ interface CarouselItemHeaderPropsInterface {
     isOpen: boolean;
     isFocused?: boolean;
     onClick: (id: string) => void;
+    isUp: boolean;
     //@Todo if there is data we don't need index as identifier anymore
     index: number;
 }
@@ -33,7 +34,7 @@ const InfoBlockBackground = styled.div<InfoBlockBackgroundPropsInterfacd>`
   cursor: pointer;
 `
 
-const CarouselItem = ({currency, timeInterval, payout, payoutMoney, market, marketMoney, isOpen, onClick, index, isFocused}: CarouselItemHeaderPropsInterface) => {
+const CarouselItem = ({currency, timeInterval, payout, payoutMoney, market, marketMoney, isOpen, onClick, index, isFocused, isUp}: CarouselItemHeaderPropsInterface) => {
     const switchFocusedStatus = (id: string) => {
         onClick(id)
     }
@@ -56,7 +57,12 @@ const CarouselItem = ({currency, timeInterval, payout, payoutMoney, market, mark
                                 <div className="right-section">
                                     <div className="right-title">{market}</div>
                                     <div className="right-number">
-                                        <FontAwesomeIcon icon={faAngleDoubleDown}/> {marketMoney}
+                                        {
+                                            isUp
+                                                ? (<FontAwesomeIcon icon={faAngleDoubleUp} color="red" />)
+                                                : (<FontAwesomeIcon icon={faAngleDoubleDown} color="lightgreen" />)
+                                        }
+                                                {marketMoney}
                                     </div>
                                 </div>
                             </div>
@@ -88,6 +94,7 @@ interface CarouselItemsPropsInterface {
         market: string;
         marketMoney: string;
         isOpen: boolean;
+        isUp: boolean;
     }[];
 }
 
@@ -110,6 +117,7 @@ export const CarouselItems = ({infoArray}: CarouselItemsPropsInterface) => {
                     isOpen={info.isOpen}
                     key={info.currency + "_" + index}
                     onClick={manageWhoIsOnFocused}
+                    isUp={info.isUp}
                     index={index}
                     isFocused
                 />
@@ -126,6 +134,7 @@ export const CarouselItems = ({infoArray}: CarouselItemsPropsInterface) => {
                 isOpen={info.isOpen}
                 key={info.currency + "_" + index}
                 onClick={manageWhoIsOnFocused}
+                isUp={info.isUp}
                 index={index}
             />
         )
