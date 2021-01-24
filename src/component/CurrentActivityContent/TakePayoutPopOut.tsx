@@ -35,7 +35,7 @@ export const TakePayoutPopOut = ({payoutInfo, popUp}: TakePayoutPopOutPropsInter
                 <div className="takePayoutPopOut-title">
                     TAKE PAYOUT
                     <div className="takePayoutPopOut-title-closeSign">
-                        <FontAwesomeIcon icon={faTimes} />
+                        <FontAwesomeIcon icon={faTimes} onClick={popUp}/>
                     </div>
                 </div>
                 <div className="takePayoutPopOut-body">
