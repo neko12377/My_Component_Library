@@ -89,6 +89,9 @@ const ListMenuItem = styled.div`
   width: 100px;
   height: 70px;
   cursor: pointer;
+  &:hover {
+    background-color: rgb(38, 38, 40);
+  }
 `;
 
 const ListContentTitle = styled.div`
@@ -102,12 +105,15 @@ const ListContentTitle = styled.div`
 
 const ListContent = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   width: 100px;
   height: 70px;
   cursor: pointer;
+  padding-left: 10px;
+  &:hover {
+    background-color: rgb(40, 40, 50);
+  }
 `;
 
 const IconWrapper = styled.div`
