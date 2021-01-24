@@ -55,6 +55,22 @@
     background-color: #131b2b;
     border-radius: 8px 8px 0 0 ;
     font-weight: bolder;
+
+    .carousel-infoBlock-title-time {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 25%;
+      height: 100%;
+    }
+
+    .carousel-infoBlock-title-favoriteSign {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 5%;
+      height: 100%;
+    }
   }
 
   .carousel-infoBlock-info {
@@ -100,8 +116,13 @@
           }
 
           .right-number {
+            display: flex;
             font-size: 20px;
             font-weight: bolder;
+
+            .right-number-number {
+                margin-left: 3px;
+            }
           }
         }
       }

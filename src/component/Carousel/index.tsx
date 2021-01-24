@@ -35,6 +35,7 @@ interface CarouselPropsInterface {
         marketMoney: string;
         isOpen: boolean;
         isUp: boolean;
+        isFavorite: boolean;
     }[];
 }
 

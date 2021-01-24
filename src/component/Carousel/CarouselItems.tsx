@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faAngleDoubleDown, faClock, faAngleDoubleUp} from "@fortawesome/free-solid-svg-icons";
+import {faAngleDoubleDown, faClock, faAngleDoubleUp, faStar} from "@fortawesome/free-solid-svg-icons";
+import {faStar as faStarRegular} from "@fortawesome/free-regular-svg-icons";
 import styled from "styled-components";
 
 interface CarouselItemHeaderPropsInterface {
@@ -14,6 +15,7 @@ interface CarouselItemHeaderPropsInterface {
     isFocused?: boolean;
     onClick: (id: string) => void;
     isUp: boolean;
+    isFavorite: boolean;
     //@Todo if there is data we don't need index as identifier anymore
     index: number;
 }
@@ -34,16 +36,34 @@ const InfoBlockBackground = styled.div<InfoBlockBackgroundPropsInterfacd>`
   cursor: pointer;
 `
 
-const CarouselItem = ({currency, timeInterval, payout, payoutMoney, market, marketMoney, isOpen, onClick, index, isFocused, isUp}: CarouselItemHeaderPropsInterface) => {
+const CarouselItem = ({currency, timeInterval, payout, payoutMoney, market, marketMoney, isOpen, onClick, index, isFocused, isUp, isFavorite}: CarouselItemHeaderPropsInterface) => {
     const switchFocusedStatus = (id: string) => {
         onClick(id)
     }
+
+    const setAsFavorite = (event: React.MouseEvent) => {event.stopPropagation()};
 
     return (
         <InfoBlockBackground isFocused={isFocused as boolean} onClick={() => switchFocusedStatus(currency + index)}>
             <div className="carousel-infoBlock">
             <div className="carousel-infoBlock-title">
-                {currency} <FontAwesomeIcon icon={faClock} /> {timeInterval}
+                {currency}
+                <div className="carousel-infoBlock-title-time">
+                    <FontAwesomeIcon icon={faClock} /> {timeInterval}
+                </div>
+                {
+                    isFavorite
+                        ? (
+                            <div className="carousel-infoBlock-title-favoriteSign" onClick={setAsFavorite}>
+                                <FontAwesomeIcon icon={faStar} />
+                            </div>
+                        )
+                        : (
+                            <div className="carousel-infoBlock-title-favoriteSign" onClick={setAsFavorite}>
+                                <FontAwesomeIcon icon={faStarRegular} />
+                            </div>
+                        )
+                }
             </div>
             <div className="carousel-infoBlock-info">
                 {isOpen ?
@@ -62,7 +82,9 @@ const CarouselItem = ({currency, timeInterval, payout, payoutMoney, market, mark
                                                 ? (<FontAwesomeIcon icon={faAngleDoubleUp} color="red" />)
                                                 : (<FontAwesomeIcon icon={faAngleDoubleDown} color="lightgreen" />)
                                         }
-                                                {marketMoney}
+                                        <div className="right-number-number">
+                                            {marketMoney}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -95,6 +117,7 @@ interface CarouselItemsPropsInterface {
         marketMoney: string;
         isOpen: boolean;
         isUp: boolean;
+        isFavorite: boolean;
     }[];
 }
 
@@ -120,6 +143,7 @@ export const CarouselItems = ({infoArray}: CarouselItemsPropsInterface) => {
                     isUp={info.isUp}
                     index={index}
                     isFocused
+                    isFavorite={info.isFavorite}
                 />
             )
         }
@@ -135,6 +159,7 @@ export const CarouselItems = ({infoArray}: CarouselItemsPropsInterface) => {
                 key={info.currency + "_" + index}
                 onClick={manageWhoIsOnFocused}
                 isUp={info.isUp}
+                isFavorite={info.isFavorite}
                 index={index}
             />
         )
