@@ -10,7 +10,7 @@ export const Main = () => {
     }
     return (
         <div className="main">
-            <MainTitle switchHighLowMode={switchHighLowMode}/>
+            <MainTitle switchHighLowMode={switchHighLowMode} isUp/>
             <MainContent highLowMode={highLowMode}/>
         </div>
     )

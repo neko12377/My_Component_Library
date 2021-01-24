@@ -1,13 +1,14 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faAngleDoubleUp, faExchangeAlt, faHistory, faTimesCircle} from "@fortawesome/free-solid-svg-icons";
+import {faAngleDoubleUp, faAngleDoubleDown, faExchangeAlt, faHistory, faTimesCircle} from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import "./style.scss";
 
 interface MainTitlePropsInterface {
     switchHighLowMode: () => void;
+    isUp?: boolean;
 }
 
-export const MainTitle = ({switchHighLowMode}: MainTitlePropsInterface) => {
+export const MainTitle = ({switchHighLowMode, isUp}: MainTitlePropsInterface) => {
     return (
         <section className="main-title">
             <div className="main-title-leftSide">
@@ -15,7 +16,11 @@ export const MainTitle = ({switchHighLowMode}: MainTitlePropsInterface) => {
                     Gold
                 </div>
                 <div className="main-title-riseDeclineArrow">
-                    <FontAwesomeIcon icon={faAngleDoubleUp}/>
+                    {
+                        isUp
+                            ? (<FontAwesomeIcon icon={faAngleDoubleUp} color="red" />)
+                            : (<FontAwesomeIcon icon={faAngleDoubleDown} color="lightgreen" />)
+                    }
                 </div>
                 <div className="main-title-currencyNum">
                     1234.72
