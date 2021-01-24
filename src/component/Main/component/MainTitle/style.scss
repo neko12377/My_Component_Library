@@ -73,7 +73,7 @@
     align-items: center;
     min-width: 99px;
     height: 100%;
-    margin-right: 32px;
+    margin-right: 22px;
   }
 
   .main-title-clockSign {
@@ -89,8 +89,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 22px;
-    height: 100%;
+    width: 32px;
+    height: 32px;
     cursor: pointer;
+    border-radius: 50%;
+    &:hover {
+      background-color: #304367;
+    }
   }
 }

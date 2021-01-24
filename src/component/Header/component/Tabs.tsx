@@ -14,13 +14,15 @@ const StyledTab = styled.div<StyledTabPropsInterface>`
   width: ${props => props.tabWidth};
   height: 30px;
   margin-right: 3px;
-  background-color: rgb(38, 44, 57);
+  background-color: #262C39;
   border-radius: 16px 16px 0 0;
   border-right: black solid 1px;
   border-bottom: black solid 1px;
+  cursor: pointer;
 
   &:hover {
-    cursor: pointer;
+    background-color: #0f121a;
+  }
 `
 
 const FocusedStyledTab = styled(StyledTab)`

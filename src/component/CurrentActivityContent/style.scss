@@ -54,6 +54,7 @@
           }
           &.strike {
             .strike-money {
+              padding-left: 5px;
               color: #a3a3a3;
             }
           }
@@ -64,6 +65,11 @@
             border: 0;
             font-weight: lighter;
             color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            &:hover {
+              background-color: #e23c06;
+            }
           }
         }
       }

@@ -120,9 +120,13 @@ const IconWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 15px;
-  height: 100%;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
+  border-radius: 50%;
+  &:hover {
+    background-color: #6e6e7c;
+  }
 `;
 
 interface DropDownListContentBlockPropsInterface {
